@@ -1,0 +1,13 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/fbjs/flow/
+
+[include]
+
+[libs]
+flow-typed
+
+[options]
+unsafe.enable_getters_and_setters=true
+module.file_ext=.js
+module.file_ext=.less
+module.name_mapper='.*\(.less\)' -> 'empty/object'

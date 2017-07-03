@@ -1,0 +1,120 @@
+@import './util.import.less';
+@import './theme.less';
+
+.PadSplit {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .wt-container {
+    min-width: 0;
+  }
+
+  &-Sidebar {
+    flex: 0 0 250px;
+    padding: 1.5rem 1rem;
+    width: 250px;
+    border-right: 1px solid #eee;
+  }
+
+  &-SidebarItem {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid fadeout(@colorConcrete, 70%, relative);
+  }
+
+  &-Main {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+  }
+
+  &-Editors {
+    flex: 1 1;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+
+  &-Left {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-in;
+  }
+
+  &-Right {
+    flex: 1 1;
+    display: flex;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-in;
+  }
+
+  &-Hidden {
+    flex: 0 1;
+  }
+
+  &-EditorWrapper {
+    flex: 1 1;
+    overflow: auto;
+  }
+
+  .editor-fork-banner {
+    .font-s1;
+    text-align: center;
+    background-color: @color-accent-warmer;
+    padding: .5rem 1rem;
+  }
+
+  &-ErrorWrapper {
+    // font-size: 0;
+    // flex: 0 0 auto;
+    // padding: 5px;
+    background-color: @color-negative;
+    padding: 5px 15px;
+
+    code {
+      .font-s1;
+      .font-code;
+      display: block;
+      color: @color-lightest;
+    }
+
+    &--yellow {
+      background-color: yellow;
+
+      code {
+        color: @color-darkest;
+      }
+    }
+  }
+
+  &-ErrorText {
+  }
+
+  &-Logs {
+    flex: 0 0 auto;
+    z-index: 100;
+  }
+}
+
+.welcome-modal-start-wrapper {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.welcome-modal-start {
+  background-color: @color-complementary !important;
+}

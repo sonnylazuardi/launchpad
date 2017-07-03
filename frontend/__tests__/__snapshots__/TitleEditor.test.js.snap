@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`interaction 1`] = `
+<TitleEditor
+  canEdit={true}
+  githubUsername="example"
+  onSetTitle={[Function]}
+  title="test"
+>
+  <div
+    className="Title-Editor"
+  >
+    <div
+      aria-label="Edit Title and Description"
+      className="edit-title-button"
+    >
+      <span
+        className="icon-edit"
+      />
+    </div>
+    <input
+      className="TitleInput"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="Untitled"
+      type="text"
+      value="test"
+    />
+  </div>
+</TitleEditor>
+`;
+
+exports[`interaction 2`] = `
+<TitleEditor
+  canEdit={true}
+  githubUsername="example"
+  onSetTitle={[Function]}
+  title="test"
+>
+  <div
+    className="Title-Editor"
+  >
+    <div
+      aria-label="Edit Title and Description"
+      className="edit-title-button"
+    >
+      <span
+        className="icon-edit"
+      />
+    </div>
+    <input
+      className="TitleInput"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="Untitled"
+      type="text"
+      value="New test"
+    />
+  </div>
+</TitleEditor>
+`;
+
+exports[`interaction 3`] = `
+<TitleEditor
+  canEdit={true}
+  githubUsername="example"
+  onSetTitle={[Function]}
+  title="test"
+>
+  <div
+    className="Title-Editor"
+  >
+    <div
+      aria-label="Edit Title and Description"
+      className="edit-title-button"
+    >
+      <span
+        className="icon-edit"
+      />
+    </div>
+    <input
+      className="TitleInput"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="Untitled"
+      type="text"
+      value="New test 2"
+    />
+  </div>
+</TitleEditor>
+`;
+
+exports[`render normal 1`] = `
+<div
+  className="Title-Editor"
+>
+  <div
+    aria-label="Edit Title and Description"
+    className="edit-title-button"
+  >
+    <span
+      className="icon-edit"
+    />
+  </div>
+  <input
+    className="TitleInput"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder="Untitled"
+    type="text"
+    value="Test"
+  />
+</div>
+`;
+
+exports[`render normal 2`] = `
+<div
+  className="Title"
+>
+  <div>
+    Test
+     
+    <span>
+      by
+       
+      <a
+        href="https://github.com/example"
+        target="_blank"
+      >
+        example
+      </a>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`render normal 3`] = `
+<div
+  className="Title-Editor"
+>
+  <div
+    aria-label="Edit Title and Description"
+    className="edit-title-button"
+  >
+    <span
+      className="icon-edit"
+    />
+  </div>
+  <input
+    className="TitleInput"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder="Untitled"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`render normal 4`] = `
+<div
+  className="Title-Editor"
+>
+  <div
+    aria-label="Edit Title and Description"
+    className="edit-title-button"
+  >
+    <span
+      className="icon-edit"
+    />
+  </div>
+  <input
+    className="TitleInput"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder="Untitled"
+    type="text"
+    value=""
+  />
+</div>
+`;

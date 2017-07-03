@@ -1,0 +1,214 @@
+@import './util.import.less';
+@import "./theme.less";
+
+.GraphiQLWrapper {
+  display: flex;
+  flex: 1 1;
+  position: relative;
+  z-index: 1;
+
+  .docExplorerShow {
+    display: none;
+  }
+
+  &-NoGraphiQL {
+    flex: 1 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: @color-lightest;
+    color: @color-complementary;
+    padding: 10px;
+  }
+
+  &-LoadingIndicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: fadeout(@colorMineShaft, 80%, relative);
+    color: @color-complementary;
+  }
+
+  &-Header {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+}
+
+.graphiql-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  .CodeMirror {
+    .font-s1;
+  }
+
+  .footer {
+    border: none;
+    border-top: #ccc solid 1px;
+    margin: 0;
+    padding: 3px;
+    &::before {
+      display: none;
+    }
+  }
+
+  .topBar {
+    background: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: .5px 1rem;
+    color: #333;
+    display: flex;
+
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .title {
+      font-size: 14px;
+      font-weight: bold;
+
+      em {
+        font-size: 14px;
+      }
+    }
+
+    .execute-button-wrap {
+      margin: 0;
+      height: 24px;
+
+      .execute-button {
+        border: none;
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+        height: 24px;
+        width: 24px;
+        margin: 0 .5rem 0 20px;
+
+        &:hover,
+        &:active {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        svg {
+          margin-top: -5px;
+          margin-left: -5px;
+        }
+      }
+    }
+
+    .toolbar-button {
+      .type-primary;
+      .font-s2;
+      color: fade(@color-darkest, 80%);
+      margin: 0;
+      line-height: 24px;
+      padding: 0 .5rem;
+      border-radius: 0;
+      background: none;
+      border: none;
+      box-shadow: none;
+
+      &:hover,
+      &:active {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    label {
+      margin: 0 0 0 20px;
+      cursor: pointer;
+      font-weight: normal;
+      font-size: 12px;
+
+      input {
+        margin: 0 5px 0 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .variable-editor {
+    height: 60px;
+    position: relative;
+
+    .CodeMirror-scroll {
+      padding-top: 15px;
+    }
+
+    .variable-editor-title {
+      .subheading-caps;
+      .display(flex);
+      .align-items(center);
+      .transition(all 500ms ease-out);
+      background-color: transparent;
+      font-size: 9px;
+      border: none;
+      padding: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 10;
+      height: 11px;
+
+      &:hover {
+        .transition(all 500ms ease-out);
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        height: 1px;
+        flex: 1;
+        width: auto;
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      &:before {
+        margin-right: 10px;
+      }
+      &:after {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .CodeMirror-lines {
+    padding: 5px 0;
+  }
+
+  .CodeMirror-gutters {
+    border: none;
+    background-color: #fbfbfb;
+    padding: 0;
+  }
+
+  .CodeMirror-gutter.CodeMirror-linenumbers {
+    width: 20px;
+  }
+
+  .result-window {
+    background-color: rgba(0, 0, 0, 0.02);
+
+    .CodeMirror-gutters {
+      cursor: ew-resize;
+      border: none;
+      background-color: transparent;
+    }
+  }
+
+  .resultWrap {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}

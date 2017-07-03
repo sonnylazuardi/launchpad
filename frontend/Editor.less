@@ -1,0 +1,58 @@
+@import './util.import.less';
+
+.cm-s-solarized.CodeMirror {
+  box-shadow: none;
+}
+
+.Editor {
+  position: relative;
+
+  .ReactCodeMirror {
+    height: 100%;
+
+    .CodeMirror {
+      height: 100%;
+      box-shadow: none;
+    }
+  }
+}
+
+.GraphiQLWrapper {
+  .resultWrap {
+    .CodeMirror-scroll {
+      .CodeMirror-gutters {
+        display: none;
+      }
+    }
+  }
+}
+
+.CodeMirror {
+  .font-s1;
+  .type-code;
+
+  .CodeMirror-scroll {
+    .CodeMirror-gutters {
+      background-color: fade(@color-lightest, 85%);
+      border-right: 1px solid rgba(0, 0, 0, 0.05);
+      padding-right: 2px;
+
+      .CodeMirror-gutter.CodeMirror-lint-markers,
+      .CodeMirror-gutter.CodeMirror-foldgutter {
+        display: none;
+      }
+
+      .CodeMirror-gutter.CodeMirror-linenumbers {
+        width: 22px;
+      }
+    }
+
+    .CodeMirror-gutter-wrapper {
+      .CodeMirror-linenumber.CodeMirror-gutter-elt {
+        padding: 1px 8px 0 5px;
+        font-size: 10px;
+        color: #aabac2;
+      }
+    }
+  }
+}

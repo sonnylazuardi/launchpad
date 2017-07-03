@@ -1,0 +1,578 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<KeyValueEditor
+  onChange={[Function]}
+  value={Array []}
+>
+  <div
+    className="KeyValueEditor"
+  >
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Key
+      </div>
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Value
+      </div>
+    </div>
+    <button
+      className="KeyValueEditor-AddButton btn primary"
+      onClick={[Function]}
+    >
+      <span>
+        Add
+      </span>
+      <span
+        className="icon-plus"
+      />
+    </button>
+  </div>
+</KeyValueEditor>
+`;
+
+exports[`renders 2`] = `
+<KeyValueEditor
+  onChange={[Function]}
+  value={
+    Array [
+      Object {
+        "key": "test",
+        "value": "bar",
+      },
+    ]
+  }
+>
+  <div
+    className="KeyValueEditor"
+  >
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Key
+      </div>
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Value
+      </div>
+    </div>
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <input
+        className="KeyValueEditor-Input"
+        disabled={false}
+        onChange={[Function]}
+        value="test"
+      />
+      <input
+        className="KeyValueEditor-Input"
+        onChange={[Function]}
+        value="bar"
+      />
+      <button
+        className="KeyValueEditor-DeleteButton"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-cross"
+        />
+      </button>
+    </div>
+    <button
+      className="KeyValueEditor-AddButton btn primary"
+      onClick={[Function]}
+    >
+      <span>
+        Add
+      </span>
+      <span
+        className="icon-plus"
+      />
+    </button>
+  </div>
+</KeyValueEditor>
+`;
+
+exports[`renders 3`] = `
+<KeyValueEditor
+  onChange={[Function]}
+  value={
+    Array [
+      Object {
+        "key": "test",
+        "value": "bar",
+      },
+      Object {
+        "key": "test2",
+        "value": "baz",
+      },
+    ]
+  }
+>
+  <div
+    className="KeyValueEditor"
+  >
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Key
+      </div>
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Value
+      </div>
+    </div>
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <input
+        className="KeyValueEditor-Input"
+        disabled={false}
+        onChange={[Function]}
+        value="test"
+      />
+      <input
+        className="KeyValueEditor-Input"
+        onChange={[Function]}
+        value="bar"
+      />
+      <button
+        className="KeyValueEditor-DeleteButton"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-cross"
+        />
+      </button>
+    </div>
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <input
+        className="KeyValueEditor-Input"
+        disabled={false}
+        onChange={[Function]}
+        value="test2"
+      />
+      <input
+        className="KeyValueEditor-Input"
+        onChange={[Function]}
+        value="baz"
+      />
+      <button
+        className="KeyValueEditor-DeleteButton"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-cross"
+        />
+      </button>
+    </div>
+    <button
+      className="KeyValueEditor-AddButton btn primary"
+      onClick={[Function]}
+    >
+      <span>
+        Add
+      </span>
+      <span
+        className="icon-plus"
+      />
+    </button>
+  </div>
+</KeyValueEditor>
+`;
+
+exports[`renders 4`] = `
+<KeyValueEditor
+  onChange={[Function]}
+  value={
+    Array [
+      Object {
+        "key": "test",
+        "value": "bar",
+      },
+      Object {
+        "key": "test2",
+        "value": "",
+      },
+    ]
+  }
+>
+  <div
+    className="KeyValueEditor"
+  >
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Key
+      </div>
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Value
+      </div>
+    </div>
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <input
+        className="KeyValueEditor-Input"
+        disabled={false}
+        onChange={[Function]}
+        value="test"
+      />
+      <input
+        className="KeyValueEditor-Input"
+        onChange={[Function]}
+        value="bar"
+      />
+      <button
+        className="KeyValueEditor-DeleteButton"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-cross"
+        />
+      </button>
+    </div>
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <input
+        className="KeyValueEditor-Input"
+        disabled={false}
+        onChange={[Function]}
+        value="test2"
+      />
+      <input
+        className="KeyValueEditor-Input"
+        onChange={[Function]}
+        value=""
+      />
+      <button
+        className="KeyValueEditor-DeleteButton"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-cross"
+        />
+      </button>
+    </div>
+    <button
+      className="KeyValueEditor-AddButton btn primary"
+      onClick={[Function]}
+    >
+      <span>
+        Add
+      </span>
+      <span
+        className="icon-plus"
+      />
+    </button>
+  </div>
+</KeyValueEditor>
+`;
+
+exports[`renders 5`] = `
+<KeyValueEditor
+  hilightEmpty={true}
+  onChange={[Function]}
+  value={
+    Array [
+      Object {
+        "key": "test",
+        "value": "bar",
+      },
+      Object {
+        "key": "test2",
+        "value": "",
+      },
+    ]
+  }
+>
+  <div
+    className="KeyValueEditor"
+  >
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Key
+      </div>
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Value
+      </div>
+    </div>
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <input
+        className="KeyValueEditor-Input"
+        disabled={false}
+        onChange={[Function]}
+        value="test"
+      />
+      <input
+        className="KeyValueEditor-Input"
+        onChange={[Function]}
+        value="bar"
+      />
+      <button
+        className="KeyValueEditor-DeleteButton"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-cross"
+        />
+      </button>
+    </div>
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <input
+        className="KeyValueEditor-Input"
+        disabled={false}
+        onChange={[Function]}
+        value="test2"
+      />
+      <input
+        className="KeyValueEditor-Input KeyValueEditor-Input--error"
+        onChange={[Function]}
+        value=""
+      />
+      <button
+        className="KeyValueEditor-DeleteButton"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-cross"
+        />
+      </button>
+    </div>
+    <button
+      className="KeyValueEditor-AddButton btn primary"
+      onClick={[Function]}
+    >
+      <span>
+        Add
+      </span>
+      <span
+        className="icon-plus"
+      />
+    </button>
+  </div>
+</KeyValueEditor>
+`;
+
+exports[`renders 6`] = `
+<KeyValueEditor
+  hilightEmpty={true}
+  onChange={[Function]}
+  value={
+    Array [
+      Object {
+        "key": "test",
+        "value": "bar",
+      },
+      Object {
+        "key": "test2",
+        "value": "",
+      },
+    ]
+  }
+>
+  <div
+    className="KeyValueEditor"
+  >
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Key
+      </div>
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Value
+      </div>
+    </div>
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <input
+        className="KeyValueEditor-Input"
+        disabled={false}
+        onChange={[Function]}
+        value="test"
+      />
+      <input
+        className="KeyValueEditor-Input"
+        onChange={[Function]}
+        value="bar"
+      />
+      <button
+        className="KeyValueEditor-DeleteButton"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-cross"
+        />
+      </button>
+    </div>
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <input
+        className="KeyValueEditor-Input"
+        disabled={false}
+        onChange={[Function]}
+        value="test2"
+      />
+      <input
+        className="KeyValueEditor-Input KeyValueEditor-Input--error"
+        onChange={[Function]}
+        value=""
+      />
+      <button
+        className="KeyValueEditor-DeleteButton"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-cross"
+        />
+      </button>
+    </div>
+    <button
+      className="KeyValueEditor-AddButton btn primary"
+      onClick={[Function]}
+    >
+      <span>
+        Add
+      </span>
+      <span
+        className="icon-plus"
+      />
+    </button>
+  </div>
+</KeyValueEditor>
+`;
+
+exports[`renders 7`] = `
+<KeyValueEditor
+  hilightEmpty={true}
+  onChange={[Function]}
+  value={
+    Array [
+      Object {
+        "key": "test",
+        "value": "bar",
+      },
+      Object {
+        "key": "test2",
+        "value": "",
+      },
+    ]
+  }
+>
+  <div
+    className="KeyValueEditor"
+  >
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Key
+      </div>
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Value
+      </div>
+    </div>
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <input
+        className="KeyValueEditor-Input"
+        disabled={false}
+        onChange={[Function]}
+        value="test"
+      />
+      <input
+        className="KeyValueEditor-Input"
+        onChange={[Function]}
+        value="bar"
+      />
+      <button
+        className="KeyValueEditor-DeleteButton"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-cross"
+        />
+      </button>
+    </div>
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <input
+        className="KeyValueEditor-Input"
+        disabled={false}
+        onChange={[Function]}
+        value="test2"
+      />
+      <input
+        className="KeyValueEditor-Input KeyValueEditor-Input--error"
+        onChange={[Function]}
+        value=""
+      />
+      <button
+        className="KeyValueEditor-DeleteButton"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-cross"
+        />
+      </button>
+    </div>
+    <button
+      className="KeyValueEditor-AddButton btn primary"
+      onClick={[Function]}
+    >
+      <span>
+        Add
+      </span>
+      <span
+        className="icon-plus"
+      />
+    </button>
+  </div>
+</KeyValueEditor>
+`;

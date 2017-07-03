@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders normal 1`] = `
+<div
+  className="loading-spinner small test"
+>
+  <div
+    className="spinner-wheel"
+  />
+  <div
+    className="spinner-ticks"
+  >
+    <div
+      className="spinner-tick"
+    />
+    <div
+      className="spinner-tick"
+    />
+    <div
+      className="spinner-tick"
+    />
+    <div
+      className="spinner-tick"
+    />
+    <div
+      className="spinner-tick"
+    />
+    <div
+      className="spinner-tick"
+    />
+    <div
+      className="spinner-tick"
+    />
+    <div
+      className="spinner-tick"
+    />
+    <div
+      className="spinner-tick"
+    />
+    <div
+      className="spinner-tick"
+    />
+    <div
+      className="spinner-tick"
+    />
+    <div
+      className="spinner-tick"
+    />
+    <div
+      className="spinner-tick"
+    />
+    <div
+      className="spinner-tick"
+    />
+    <div
+      className="spinner-tick"
+    />
+    <div
+      className="spinner-tick"
+    />
+  </div>
+</div>
+`;

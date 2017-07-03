@@ -1,0 +1,61 @@
+@import '../util.import.less';
+
+.Title {
+  padding: 0 1.5rem;
+}
+
+.Title-Editor {
+  width: 400px;
+
+  input.TitleInput {
+    .type-primary !important;
+    background: transparent !important;
+    height: 3em;
+    padding-left: 40px !important;
+
+    &::placeholder {
+      color: fade(@color-lightest, 70%) !important;
+    }
+    &::-webkit-input-placeholder {
+      color: fade(@color-lightest, 70%) !important;
+    }
+    &::-moz-placeholder {
+      color: fade(@color-lightest, 70%) !important;
+    }
+    &:-ms-input-placeholder {
+      color: fade(@color-lightest, 70%) !important;
+    }
+    &:-moz-placeholder {
+      color: fade(@color-lightest, 70%) !important;
+    }
+
+    &::before {
+      display: inline;
+      content: "\E625";
+    }
+
+    &:disabled {
+      color: inherit;
+      opacity: 1 !important;
+      padding-left: 10px !important;
+
+      &:hover {
+        background: transparent !important;
+      }
+
+      &:focus {
+        background: transparent !important;
+      }
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    &:focus {
+      background: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    color: white !important;
+  }
+}

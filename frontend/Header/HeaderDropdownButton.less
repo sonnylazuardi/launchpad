@@ -1,0 +1,26 @@
+@import '../util.import.less';
+@import '../theme.less';
+
+.HeaderDropdownButton {
+  .font-s2;
+  .type-semibold;
+  height: 42px;
+  color: fade(@color-lightest, 90%);
+  position: relative;
+  border: none;
+  background-color: transparent;
+  padding: 0 1rem;
+  display: block;
+  width: 100%;
+  text-align: left;
+
+  &:hover {
+    color: @color-lightest;
+    background-color: fade(@color-lightest, 10%);
+  }
+
+  &--active {
+    color: @color-lightest;
+    border-color: @color-lightest;
+  }
+}

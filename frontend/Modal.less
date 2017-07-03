@@ -1,0 +1,52 @@
+@import './util.import.less';
+
+.ModalOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  .background-image(linear-gradient(to bottom, rgba(240, 240, 255, 0.9) 0%, rgba(245, 245, 245, 0.85) 100%));
+  .display(flex);
+  .justify-content(center);
+  .align-items(center);
+
+  .Modal {
+    width: 500px;
+    outline: none;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin: 0 0 1rem 0;
+    }
+
+    &-Title {
+      text-align: center;
+      font-size: 32px;
+      line-height: 1;
+      font-weight: 300;
+      margin-bottom: 1.25rem;
+      line-height: 1.25 !important;
+    }
+
+    &-Body {
+      background-color: @color-lightest;
+      padding: 1.875rem;
+      flex: 1;
+    }
+
+    .close-button {
+      font-size: 24px;
+      color: #999999;
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 1.875rem;
+      border: none;
+      background-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import './theme.less';
+
+.ListPad {
+  display: block;
+  flex: 0 0 400px;
+  border: 1px solid darken(@colorConcrete, 10%);
+  margin: 25px 25px;
+
+  &:hover {
+    border-color: @colorJungleGreen;
+  }
+
+  &-Link {
+    display: block;
+    color: blаck;
+    width: 100%;
+    height: 100%;
+    font-weight: normal;
+
+    &:visited,
+    &:-webkit-any-link {
+      color: black;
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex: 0 0 100%;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  &-Header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 5px;
+    border-bottom: 1px solid darken(@colorAlabaster, 10%);
+  }
+
+  &-HeaderUsername {
+    margin-right: 10px;
+  }
+
+  &-HeaderTitle {
+    font-weight: bold;
+  }
+
+  &-Code {
+    white-space: pre;
+    height: 300px;
+    overflow: hidden;
+    width: 390px;
+    padding: 5px;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+}

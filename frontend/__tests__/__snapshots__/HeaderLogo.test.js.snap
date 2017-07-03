@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders normal 1`] = `
+<div
+  className="HeaderLogo"
+>
+  <a
+    href="https://www.apollodata.com/"
+  >
+    <img
+      alt="Apollo Logo"
+      className="Logo"
+      src="icon-apollo-white.small.svg"
+    />
+  </a>
+  <a
+    href="/new"
+  >
+    <img
+      alt="Apollo Launchpad"
+      className="Subbrand"
+      src="logo-apollo-white-subbrand-launchpad.svg"
+    />
+  </a>
+</div>
+`;

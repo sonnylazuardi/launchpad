@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders empty 1`] = `
+<div
+  className="List"
+>
+  <ListHeader
+    onLogout={[Function]}
+    user={
+      Object {
+        "githubUsername": "example",
+        "id": "test-ids",
+        "pads": Array [],
+      }
+    }
+  />
+  <div
+    className="List-PadList"
+  >
+    
+  </div>
+</div>
+`;
+
+exports[`renders full 1`] = `
+<div
+  className="List"
+>
+  <ListHeader
+    onLogout={[Function]}
+    user={
+      Object {
+        "githubUsername": "example",
+        "id": "test-ids",
+        "pad": Array [
+          Object {},
+        ],
+        "pads": Array [
+          Object {
+            "code": "code",
+            "context": Array [
+              Object {
+                "key": "secret",
+                "value": "secret",
+              },
+            ],
+            "defaultQuery": "{ hello }",
+            "defaultVariables": null,
+            "dependencies": Array [
+              Object {
+                "name": "graphql-js",
+                "version": "0.8.9",
+              },
+            ],
+            "deployedCode": "deployed code",
+            "description": "Description 1",
+            "draft": null,
+            "id": "fakeid1",
+            "title": "Fake 1",
+            "token": "test-token-2",
+            "url": "http://example.com",
+            "user": Object {
+              "githubUsername": "example",
+              "id": "test-ids",
+              "pads": Array [],
+            },
+          },
+          Object {
+            "code": "code 2",
+            "context": Array [
+              Object {
+                "key": "secret",
+                "value": "secret",
+              },
+            ],
+            "defaultQuery": "{ hello }",
+            "defaultVariables": null,
+            "dependencies": Array [
+              Object {
+                "name": "graphql-js",
+                "version": "0.8.9",
+              },
+            ],
+            "deployedCode": "deployed code 2",
+            "description": "Description 2",
+            "draft": null,
+            "id": "fakeid2",
+            "title": "Fake 2",
+            "token": "test-token-2",
+            "url": "http://example.com/2",
+            "user": Object {
+              "githubUsername": "example",
+              "id": "test-ids",
+              "pads": Array [],
+            },
+          },
+        ],
+      }
+    }
+  />
+  <div
+    className="List-PadList"
+  >
+    <ListPad
+      pad={
+        Object {
+          "code": "code",
+          "context": Array [
+            Object {
+              "key": "secret",
+              "value": "secret",
+            },
+          ],
+          "defaultQuery": "{ hello }",
+          "defaultVariables": null,
+          "dependencies": Array [
+            Object {
+              "name": "graphql-js",
+              "version": "0.8.9",
+            },
+          ],
+          "deployedCode": "deployed code",
+          "description": "Description 1",
+          "draft": null,
+          "id": "fakeid1",
+          "title": "Fake 1",
+          "token": "test-token-2",
+          "url": "http://example.com",
+          "user": Object {
+            "githubUsername": "example",
+            "id": "test-ids",
+            "pads": Array [],
+          },
+        }
+      }
+    />
+    <ListPad
+      pad={
+        Object {
+          "code": "code 2",
+          "context": Array [
+            Object {
+              "key": "secret",
+              "value": "secret",
+            },
+          ],
+          "defaultQuery": "{ hello }",
+          "defaultVariables": null,
+          "dependencies": Array [
+            Object {
+              "name": "graphql-js",
+              "version": "0.8.9",
+            },
+          ],
+          "deployedCode": "deployed code 2",
+          "description": "Description 2",
+          "draft": null,
+          "id": "fakeid2",
+          "title": "Fake 2",
+          "token": "test-token-2",
+          "url": "http://example.com/2",
+          "user": Object {
+            "githubUsername": "example",
+            "id": "test-ids",
+            "pads": Array [],
+          },
+        }
+      }
+    />
+  </div>
+</div>
+`;

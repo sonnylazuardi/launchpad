@@ -1,0 +1,33 @@
+@import '../util.import.less';
+
+.UserBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+
+  &-UserName {
+    .font-s2;
+    font-style: italic;
+    margin-right: 1rem;
+    .display(flex);
+    .align-items(center);
+
+    .icon-user {
+      margin-right: 5px;
+      margin-top: 2px;
+    }
+  }
+
+  &-Dropdown {
+    position: absolute;
+    top: 100%;
+    background-color: #ccc;
+    right: 0;
+  }
+
+  &-Arrow {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+}

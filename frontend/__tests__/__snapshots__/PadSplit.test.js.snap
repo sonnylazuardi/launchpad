@@ -1,0 +1,417 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render normally 1`] = `
+<div
+  className="PadSplit"
+>
+  <Header
+    isDeploying={false}
+    onDeploy={[Function]}
+    onDownload={[Function]}
+    onFork={[Function]}
+    onLogin={[Function]}
+    onLogout={[Function]}
+    onReset={[Function]}
+    onSetDescription={[Function]}
+    onSetTitle={[Function]}
+    pad={
+      Object {
+        "code": "code",
+        "context": Array [
+          Object {
+            "key": "secret",
+            "value": "secret",
+          },
+        ],
+        "defaultQuery": "{ hello }",
+        "defaultVariables": null,
+        "dependencies": Array [
+          Object {
+            "name": "graphql-js",
+            "version": "0.8.9",
+          },
+        ],
+        "deployedCode": "deployed code",
+        "description": "Description 1",
+        "draft": null,
+        "id": "fakeid1",
+        "title": "Fake 1",
+        "token": "test-token-2",
+        "url": "http://example.com",
+        "user": Object {
+          "githubUsername": "example",
+          "id": "test-ids",
+          "pads": Array [],
+        },
+      }
+    }
+    user={
+      Object {
+        "githubUsername": "example",
+        "id": "test-ids",
+        "pads": Array [],
+      }
+    }
+  />
+  <div
+    className="PadSplit-Main"
+  >
+    <div
+      className="PadSplit-Editors"
+    >
+      <SplitPane
+        allowResize={true}
+        defaultSize="50%"
+        minSize={50}
+        prefixer={
+          Prefixer {
+            "_browserInfo": Object {
+              "browserName": "safari",
+              "browserVersion": 7,
+              "cssPrefix": "-webkit-",
+              "jsPrefix": "Webkit",
+              "name": "Safari",
+              "osVersion": 7,
+              "osversion": "7",
+              "safari": true,
+              "webkit": true,
+              "windows": true,
+              "x": true,
+            },
+            "_hasPropsRequiringPrefix": true,
+            "_keepUnprefixed": false,
+            "_metaData": Object {
+              "browserName": "safari",
+              "browserVersion": 7,
+              "cssPrefix": "-webkit-",
+              "jsPrefix": "Webkit",
+              "keepUnprefixed": false,
+              "requiresPrefix": Object {
+                "alignContent": true,
+                "alignItems": true,
+                "alignSelf": true,
+                "animation": true,
+                "animationDelay": true,
+                "animationDirection": true,
+                "animationDuration": true,
+                "animationFillMode": true,
+                "animationIterationCount": true,
+                "animationName": true,
+                "animationPlayState": true,
+                "animationTimingFunction": true,
+                "appearance": true,
+                "backdropFilter": true,
+                "backfaceVisibility": true,
+                "boxDecorationBreak": true,
+                "breakAfter": true,
+                "breakBefore": true,
+                "breakInside": true,
+                "clipPath": true,
+                "columnCount": true,
+                "columnFill": true,
+                "columnGap": true,
+                "columnRule": true,
+                "columnRuleColor": true,
+                "columnRuleStyle": true,
+                "columnRuleWidth": true,
+                "columnSpan": true,
+                "columnWidth": true,
+                "columns": true,
+                "filter": true,
+                "flex": true,
+                "flexBasis": true,
+                "flexDirection": true,
+                "flexFlow": true,
+                "flexGrow": true,
+                "flexShrink": true,
+                "flexWrap": true,
+                "flowFrom": true,
+                "flowInto": true,
+                "fontKerning": true,
+                "hyphens": true,
+                "justifyContent": true,
+                "mask": true,
+                "maskBorder": true,
+                "maskBorderMode": true,
+                "maskBorderOutset": true,
+                "maskBorderRepeat": true,
+                "maskBorderSlice": true,
+                "maskBorderSource": true,
+                "maskBorderWidth": true,
+                "maskClip": true,
+                "maskComposite": true,
+                "maskImage": true,
+                "maskMode": true,
+                "maskOrigin": true,
+                "maskPosition": true,
+                "maskRepeat": true,
+                "maskSize": true,
+                "maskType": true,
+                "order": true,
+                "perspective": true,
+                "perspectiveOrigin": true,
+                "regionFragment": true,
+                "scrollSnapCoordinate": true,
+                "scrollSnapDestination": true,
+                "scrollSnapPointsX": true,
+                "scrollSnapPointsY": true,
+                "scrollSnapType": true,
+                "shapeImageMargin": true,
+                "shapeImageOutside": true,
+                "shapeImageThreshold": true,
+                "textDecorationColor": true,
+                "textDecorationLine": true,
+                "textDecorationSkip": true,
+                "textDecorationStyle": true,
+                "transform": true,
+                "transformOrigin": true,
+                "transformOriginX": true,
+                "transformOriginY": true,
+                "transformOriginZ": true,
+                "transformStyle": true,
+                "userSelect": true,
+              },
+            },
+            "_requiresPrefix": Object {
+              "alignContent": true,
+              "alignItems": true,
+              "alignSelf": true,
+              "animation": true,
+              "animationDelay": true,
+              "animationDirection": true,
+              "animationDuration": true,
+              "animationFillMode": true,
+              "animationIterationCount": true,
+              "animationName": true,
+              "animationPlayState": true,
+              "animationTimingFunction": true,
+              "appearance": true,
+              "backdropFilter": true,
+              "backfaceVisibility": true,
+              "boxDecorationBreak": true,
+              "breakAfter": true,
+              "breakBefore": true,
+              "breakInside": true,
+              "clipPath": true,
+              "columnCount": true,
+              "columnFill": true,
+              "columnGap": true,
+              "columnRule": true,
+              "columnRuleColor": true,
+              "columnRuleStyle": true,
+              "columnRuleWidth": true,
+              "columnSpan": true,
+              "columnWidth": true,
+              "columns": true,
+              "filter": true,
+              "flex": true,
+              "flexBasis": true,
+              "flexDirection": true,
+              "flexFlow": true,
+              "flexGrow": true,
+              "flexShrink": true,
+              "flexWrap": true,
+              "flowFrom": true,
+              "flowInto": true,
+              "fontKerning": true,
+              "hyphens": true,
+              "justifyContent": true,
+              "mask": true,
+              "maskBorder": true,
+              "maskBorderMode": true,
+              "maskBorderOutset": true,
+              "maskBorderRepeat": true,
+              "maskBorderSlice": true,
+              "maskBorderSource": true,
+              "maskBorderWidth": true,
+              "maskClip": true,
+              "maskComposite": true,
+              "maskImage": true,
+              "maskMode": true,
+              "maskOrigin": true,
+              "maskPosition": true,
+              "maskRepeat": true,
+              "maskSize": true,
+              "maskType": true,
+              "order": true,
+              "perspective": true,
+              "perspectiveOrigin": true,
+              "regionFragment": true,
+              "scrollSnapCoordinate": true,
+              "scrollSnapDestination": true,
+              "scrollSnapPointsX": true,
+              "scrollSnapPointsY": true,
+              "scrollSnapType": true,
+              "shapeImageMargin": true,
+              "shapeImageOutside": true,
+              "shapeImageThreshold": true,
+              "textDecorationColor": true,
+              "textDecorationLine": true,
+              "textDecorationSkip": true,
+              "textDecorationStyle": true,
+              "transform": true,
+              "transformOrigin": true,
+              "transformOriginX": true,
+              "transformOriginY": true,
+              "transformOriginZ": true,
+              "transformStyle": true,
+              "userSelect": true,
+            },
+            "_userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.2 (KHTML, like Gecko) Safari/537.2",
+            "prefixedKeyframes": "-webkit-keyframes",
+          }
+        }
+        primary="first"
+        split="vertical"
+      >
+        <div
+          className="PadSplit-Left"
+        >
+          <div
+            className="PadSplit-EditorWrapper"
+          >
+            <Editor
+              canEdit={true}
+              code="test"
+              onChange={[Function]}
+            />
+          </div>
+          <div
+            className="PadSplit-Logs"
+          />
+        </div>
+        <div
+          className="PadSplit-Right"
+        >
+          <GraphiQLWrapper
+            isDeploying={false}
+            onSetDefaultQuery={[Function]}
+            pad={
+              Object {
+                "code": "code",
+                "context": Array [
+                  Object {
+                    "key": "secret",
+                    "value": "secret",
+                  },
+                ],
+                "defaultQuery": "{ hello }",
+                "defaultVariables": null,
+                "dependencies": Array [
+                  Object {
+                    "name": "graphql-js",
+                    "version": "0.8.9",
+                  },
+                ],
+                "deployedCode": "deployed code",
+                "description": "Description 1",
+                "draft": null,
+                "id": "fakeid1",
+                "title": "Fake 1",
+                "token": "test-token-2",
+                "url": "http://example.com",
+                "user": Object {
+                  "githubUsername": "example",
+                  "id": "test-ids",
+                  "pads": Array [],
+                },
+              }
+            }
+            user={
+              Object {
+                "githubUsername": "example",
+                "id": "test-ids",
+                "pads": Array [],
+              }
+            }
+          />
+        </div>
+      </SplitPane>
+    </div>
+  </div>
+  <Footer
+    canSeeLogs={true}
+    error={null}
+    isDeployed={undefined}
+    isDraft={undefined}
+    isLogOpen={false}
+    onLogClose={[Function]}
+    onLogOpen={[Function]}
+    onModalOpen={[Function]}
+    onResetLinkClick={[Function]}
+    url="http://example.com"
+  />
+  <Modal
+    isOpen={true}
+    onRequestClose={[Function]}
+    title="Welcome to Apollo Launchpad!"
+  >
+    <p>
+      This is a tool you can use build, deploy, and share a simple GraphQL API right from your browser. We think it's a great way to experiment with GraphQL and share examples of different patterns.
+    </p>
+    <p>
+      Visit the
+       
+      <a
+        href="https://github.com/apollographql/awesome-launchpad"
+        target="_blank"
+      >
+        awesome-launchpad repository
+      </a>
+       
+      to see a list of examples and read the docs. For an introduction, read the
+       
+      <a
+        href="https://dev-blog.apollodata.com/introducing-launchpad-the-graphql-server-demo-platform-cc4e7481fcba"
+        target="_blank"
+      >
+        announcement blog post
+      </a>
+      .
+    </p>
+    <div
+      className="welcome-modal-start-wrapper"
+    >
+      <button
+        className="welcome-modal-start btn primary"
+        onClick={[Function]}
+      >
+        Start using Launchpad
+      </button>
+    </div>
+  </Modal>
+  <Modal
+    isOpen={false}
+    onRequestClose={[Function]}
+    title="Edit Server Secrets"
+  >
+    <ContextEditor
+      context={
+        Array [
+          Object {
+            "key": "test",
+            "value": "testValue",
+          },
+        ]
+      }
+      onChange={[Function]}
+    />
+  </Modal>
+  <Modal
+    isOpen={false}
+    onRequestClose={[Function]}
+    title="npm Dependencies"
+  >
+    <Dependencies
+      dependencies={
+        Array [
+          Object {
+            "name": "graphql-js",
+            "version": "0.8.9",
+          },
+        ]
+      }
+    />
+  </Modal>
+</div>
+`;

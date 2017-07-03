@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders normal 1`] = `
+<button
+  className="HeaderButton"
+  onClick={[Function]}
+>
+  <div
+    className="HeaderButton-Inner"
+  >
+    <div>
+      Content
+    </div>
+  </div>
+</button>
+`;
+
+exports[`renders normal 2`] = `
+<button
+  className="HeaderButton HeaderButton--active"
+  onClick={[Function]}
+>
+  <div
+    className="HeaderButton-Inner"
+  >
+    <div>
+      Content
+    </div>
+  </div>
+</button>
+`;
+
+exports[`renders normal 3`] = `
+<button
+  className="HeaderButton HeaderButton--disabled"
+  onClick={[Function]}
+>
+  <div
+    className="HeaderButton-Inner"
+  >
+    <div>
+      Content
+    </div>
+  </div>
+</button>
+`;
+
+exports[`renders normal 4`] = `
+<button
+  className="HeaderButton"
+  onClick={[Function]}
+>
+  <div
+    className="HeaderButton-Inner"
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  >
+    <div>
+      Content
+    </div>
+  </div>
+  <div
+    className="HeaderButton-Tooltip"
+  >
+    <div>
+      Tooltip
+    </div>
+  </div>
+</button>
+`;

@@ -1,0 +1,125 @@
+@import './util.import.less';
+@import './theme.less';
+
+.Logs {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.02);
+
+  .wt-workbench {
+    background-color: transparent;
+    border: none;
+
+    strong,
+    .wt-logs-connected {
+      color: @color-complementary !important;
+    }
+
+    .wt-panel-bottom {
+      border: none !important;
+      background-color: transparent !important;
+    }
+
+    .wt-container {
+      .wt-logs {
+        padding: 0 1rem 0 0;
+        background-color: transparent !important;
+
+        .wt-logs-item {
+          .font-s1;
+        }
+
+        .wt-logs-list-container {
+          padding-left: 10px;
+
+          .wt-logs-item:last-child {
+            padding-bottom: 8px;
+          }
+
+          .wt-logs-item-time {
+            .type-code;
+            font-size: 10px;
+            color: #88949b;
+          }
+
+          .wt-logs-item-description {
+            .type-primary;
+            .font-s1;
+          }
+        }
+      }
+
+      .wt-logs-header {
+        .display(flex);
+        .justify-content(center);
+        .align-items(center);
+        margin: 0 !important;
+
+        .wt-input-search {
+          .flex(1);
+          font-size: 12px;
+          border: none;
+          background-color: transparent;
+
+          span {
+            position: relative;
+            margin-top: -2px;
+          }
+
+          input {
+            font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial,
+              sans-serif !important;
+            background-color: transparent !important;
+            padding: 0 !important;
+
+            &::placeholder {
+              color: #88949b !important;
+            }
+            &::-webkit-input-placeholder {
+              color: #88949b !important;
+            }
+            &::-moz-placeholder {
+              color: #88949b !important;
+            }
+            &:-ms-input-placeholder {
+              color: #88949b !important;
+            }
+            &:-moz-placeholder {
+              color: #88949b !important;
+            }
+          }
+        }
+
+        [class*="wt-icon"] {
+          font-size: 12px;
+          color: @color-mediumdark !important;
+        }
+
+        .wt-input-checkbox,
+        .wt-icon-261 {
+          .flex(none);
+          margin: 0 0 0 10px;
+        }
+
+        .wt-input-checkbox {
+          .type-primary;
+          .font-s1;
+          cursor: pointer;
+          color: @color-mediumdark !important;
+
+          * {
+            cursor: pointer;
+          }
+
+          input {
+            margin-top: 3px;
+            margin-right: 3px;
+          }
+        }
+
+        .wt-close {
+          display: none;
+        }
+      }
+    }
+  }
+}

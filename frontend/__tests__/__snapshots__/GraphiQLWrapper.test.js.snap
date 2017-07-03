@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders deploying 1`] = `
+<div
+  className="GraphiQLWrapper"
+>
+  <div
+    className="GraphiQLWrapper-LoadingIndicator"
+  >
+    Updating...
+  </div>
+  <GraphiQL
+    editorTheme="solarized"
+    fetcher={[Function]}
+    onEditQuery={[Function]}
+    onEditVariables={[Function]}
+    query="{ hello }"
+    variables=""
+  >
+    <GraphiQLToolbar>
+      <ToolbarButton
+        label="Prettify"
+        onClick={[Function]}
+      />
+      <div
+        className="graphiql-button-group"
+      >
+        <ToolbarButton
+          label="Save"
+          onClick={[Function]}
+          title="Set this query as default query for this pad"
+        />
+        <ToolbarButton
+          label="Reset"
+          onClick={[Function]}
+          title="Reset query to the default one for this tab"
+        />
+        <ToolbarButton
+          label="Headers"
+          onClick={[Function]}
+          title="Edit headers sent with the GraphQL query"
+        />
+        <Modal
+          isOpen={false}
+          onRequestClose={[Function]}
+          title="GraphiQL Request Headers"
+        >
+          <KeyValueEditor
+            onChange={[Function]}
+            value={Array []}
+          />
+        </Modal>
+      </div>
+    </GraphiQLToolbar>
+  </GraphiQL>
+</div>
+`;
+
+exports[`renders normal 1`] = `
+<div
+  className="GraphiQLWrapper"
+>
+  <GraphiQL
+    editorTheme="solarized"
+    fetcher={[Function]}
+    onEditQuery={[Function]}
+    onEditVariables={[Function]}
+    query="{ hello }"
+    variables=""
+  >
+    <GraphiQLToolbar>
+      <ToolbarButton
+        label="Prettify"
+        onClick={[Function]}
+      />
+      <div
+        className="graphiql-button-group"
+      >
+        <ToolbarButton
+          label="Save"
+          onClick={[Function]}
+          title="Set this query as default query for this pad"
+        />
+        <ToolbarButton
+          label="Reset"
+          onClick={[Function]}
+          title="Reset query to the default one for this tab"
+        />
+        <ToolbarButton
+          label="Headers"
+          onClick={[Function]}
+          title="Edit headers sent with the GraphQL query"
+        />
+        <Modal
+          isOpen={false}
+          onRequestClose={[Function]}
+          title="GraphiQL Request Headers"
+        >
+          <KeyValueEditor
+            onChange={[Function]}
+            value={Array []}
+          />
+        </Modal>
+      </div>
+    </GraphiQLToolbar>
+  </GraphiQL>
+</div>
+`;

@@ -1,0 +1,13 @@
+{
+  "extends": "react-app",
+  "rules": {
+    "flowtype/require-valid-file-annotation": [
+      "error",
+      "always", {
+        "annotationStyle": "block"
+      }
+    ],
+    "no-unused-expressions": "off",
+    "no-use-before-define": "off"
+  }
+}

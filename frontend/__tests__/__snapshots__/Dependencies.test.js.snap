@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders empty 1`] = `
+<div
+  className="Dependencies"
+>
+  <p>
+    Dependencies are detected automatically from 
+    <code>
+      import
+    </code>
+     
+    statements in your code when you save, and the latest versions are selected.
+  </p>
+</div>
+`;
+
+exports[`renders non-empty 1`] = `
+<div
+  className="Dependencies"
+>
+  <p>
+    Dependencies are detected automatically from 
+    <code>
+      import
+    </code>
+     
+    statements in your code when you save, and the latest versions are selected.
+  </p>
+  <div
+    className="Dependencies-List"
+  >
+    <div
+      className="Dependencies-Item"
+    >
+      <div
+        className="Dependencies-Name"
+      >
+        graphql
+      </div>
+      <div
+        className="Dependencies-Version"
+      >
+        0.9.1S,
+      </div>
+    </div>
+    <div
+      className="Dependencies-Item"
+    >
+      <div
+        className="Dependencies-Name"
+      >
+        grahpql-tools
+      </div>
+      <div
+        className="Dependencies-Version"
+      >
+        1.0.0
+      </div>
+    </div>
+  </div>
+</div>
+`;

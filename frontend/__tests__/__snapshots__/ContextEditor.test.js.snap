@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders empty 1`] = `
+<div
+  className="ContextEditor"
+>
+  <div
+    className="KeyValueEditor"
+  >
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Key
+      </div>
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Value
+      </div>
+    </div>
+    <button
+      className="KeyValueEditor-AddButton btn primary"
+      onClick={[Function]}
+    >
+      <span>
+        Add
+      </span>
+      <span
+        className="icon-plus"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders hidden 1`] = `
+<div
+  className="ContextEditor"
+>
+  <div
+    className="KeyValueEditor"
+  >
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Key
+      </div>
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Value
+      </div>
+    </div>
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <input
+        className="KeyValueEditor-Input"
+        disabled={false}
+        onChange={[Function]}
+        value="test"
+      />
+      <input
+        className="KeyValueEditor-Input"
+        disabled={true}
+        value="*****"
+      />
+      <button
+        className="KeyValueEditor-DeleteButton"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-cross"
+        />
+      </button>
+    </div>
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <input
+        className="KeyValueEditor-Input"
+        disabled={false}
+        onChange={[Function]}
+        value="test2"
+      />
+      <input
+        className="KeyValueEditor-Input"
+        disabled={true}
+        value="*****"
+      />
+      <button
+        className="KeyValueEditor-DeleteButton"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-cross"
+        />
+      </button>
+    </div>
+    <button
+      className="KeyValueEditor-AddButton btn primary"
+      onClick={[Function]}
+    >
+      <span>
+        Add
+      </span>
+      <span
+        className="icon-plus"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders normal 1`] = `
+<div
+  className="ContextEditor"
+>
+  <div
+    className="KeyValueEditor"
+  >
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Key
+      </div>
+      <div
+        className="KeyValueEditor-Label"
+      >
+        Value
+      </div>
+    </div>
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <input
+        className="KeyValueEditor-Input"
+        disabled={false}
+        onChange={[Function]}
+        value="test"
+      />
+      <input
+        className="KeyValueEditor-Input"
+        onChange={[Function]}
+        value="value"
+      />
+      <button
+        className="KeyValueEditor-DeleteButton"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-cross"
+        />
+      </button>
+    </div>
+    <div
+      className="KeyValueEditor-Line"
+    >
+      <input
+        className="KeyValueEditor-Input"
+        disabled={false}
+        onChange={[Function]}
+        value="test2"
+      />
+      <input
+        className="KeyValueEditor-Input"
+        onChange={[Function]}
+        value="value2"
+      />
+      <button
+        className="KeyValueEditor-DeleteButton"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-cross"
+        />
+      </button>
+    </div>
+    <button
+      className="KeyValueEditor-AddButton btn primary"
+      onClick={[Function]}
+    >
+      <span>
+        Add
+      </span>
+      <span
+        className="icon-plus"
+      />
+    </button>
+  </div>
+</div>
+`;

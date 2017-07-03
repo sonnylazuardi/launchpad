@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders normal 1`] = `
+<div
+  className="Header"
+>
+  <div
+    className="Header-Left"
+  >
+    <HeaderLogo />
+    <div
+      className="Management-Buttons"
+    >
+      <HeaderButton
+        onClick={[Function]}
+      >
+        New
+      </HeaderButton>
+    </div>
+  </div>
+  <div
+    className="Header-Gap"
+  />
+  <div
+    className="Header-Right"
+  >
+    <UserBar
+      onLogin={[Function]}
+      onLogout={[Function]}
+      user={
+        Object {
+          "githubUsername": "example",
+          "id": "test-id",
+          "pads": Array [],
+        }
+      }
+    />
+  </div>
+</div>
+`;

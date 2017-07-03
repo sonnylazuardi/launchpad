@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders normal 1`] = `
+<div
+  className="HeaderDropdown"
+>
+  <div>
+    TestButton
+  </div>
+  <div
+    className="HeaderDropdown-Dropdown"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    <div>
+      Content
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders normal 2`] = `
+<div
+  className="HeaderDropdown"
+>
+  <div>
+    TestButton
+  </div>
+  <div
+    className="HeaderDropdown-Dropdown"
+    style={Object {}}
+  >
+    <div>
+      Content
+    </div>
+  </div>
+</div>
+`;

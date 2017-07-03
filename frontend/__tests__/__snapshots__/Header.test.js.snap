@@ -1,0 +1,451 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render others 1`] = `
+<div
+  className="Header"
+>
+  <div
+    className="Header-Left"
+  >
+    <HeaderLogo />
+    <div
+      className="Management-Buttons"
+    >
+      <HeaderButton
+        onClick={[Function]}
+      >
+        New
+      </HeaderButton>
+      <HeaderButton
+        disabled={undefined}
+        onClick={undefined}
+        tooltip="You can't save pads you don't own"
+      >
+        Save
+      </HeaderButton>
+      <HeaderButton
+        disabled={false}
+        onClick={[Function]}
+        tooltip={undefined}
+      >
+        Download
+      </HeaderButton>
+      <HeaderButton
+        disabled={false}
+        onClick={[Function]}
+        tooltip={undefined}
+      >
+        Fork
+      </HeaderButton>
+    </div>
+    <TitleEditor
+      canEdit={false}
+      githubUsername="example"
+      onSetTitle={[Function]}
+      title="Fake 1"
+    />
+  </div>
+  <div
+    className="Header-Gap"
+  />
+  <div
+    className="Header-Right"
+  >
+    <UserBar
+      onLogin={[Function]}
+      onLogout={[Function]}
+      user={
+        Object {
+          "githubUsername": "example",
+          "id": "test-ids",
+          "pads": Array [],
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`renders anon existing 1`] = `
+<div
+  className="Header"
+>
+  <div
+    className="Header-Left"
+  >
+    <HeaderLogo />
+    <div
+      className="Management-Buttons"
+    >
+      <HeaderButton
+        onClick={[Function]}
+      >
+        New
+      </HeaderButton>
+      <HeaderButton
+        disabled={true}
+        onClick={undefined}
+        tooltip="You need to login to save"
+      >
+        Save
+      </HeaderButton>
+      <HeaderButton
+        disabled={false}
+        onClick={[Function]}
+        tooltip={undefined}
+      >
+        Download
+      </HeaderButton>
+      <HeaderButton
+        disabled={true}
+        onClick={undefined}
+        tooltip="You need to login to fork"
+      >
+        Fork
+      </HeaderButton>
+    </div>
+    <TitleEditor
+      canEdit={false}
+      githubUsername={null}
+      onSetTitle={[Function]}
+      title="Fake 1"
+    />
+  </div>
+  <div
+    className="Header-Gap"
+  />
+  <div
+    className="Header-Right"
+  >
+    <UserBar
+      onLogin={[Function]}
+      onLogout={[Function]}
+      user={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`renders anon new 1`] = `
+<div
+  className="Header"
+>
+  <div
+    className="Header-Left"
+  >
+    <HeaderLogo />
+    <div
+      className="Management-Buttons"
+    >
+      <HeaderButton
+        onClick={[Function]}
+      >
+        New
+      </HeaderButton>
+      <HeaderButton
+        disabled={true}
+        onClick={undefined}
+        tooltip="You need to login to save"
+      >
+        Save
+      </HeaderButton>
+      <HeaderButton
+        disabled={true}
+        onClick={undefined}
+        tooltip="Save this pad to download it"
+      >
+        Download
+      </HeaderButton>
+      <HeaderButton
+        disabled={true}
+        onClick={undefined}
+        tooltip="You need to login to fork"
+      >
+        Fork
+      </HeaderButton>
+    </div>
+    <TitleEditor
+      canEdit={true}
+      githubUsername={null}
+      onSetTitle={[Function]}
+      title="Fake 1"
+    />
+  </div>
+  <div
+    className="Header-Gap"
+  />
+  <div
+    className="Header-Right"
+  >
+    <UserBar
+      onLogin={[Function]}
+      onLogout={[Function]}
+      user={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`renders deploying 1`] = `
+<div
+  className="Header"
+>
+  <div
+    className="Header-Left"
+  >
+    <HeaderLogo />
+    <div
+      className="Management-Buttons"
+    >
+      <HeaderButton
+        onClick={[Function]}
+      >
+        New
+      </HeaderButton>
+      <HeaderButton
+        disabled={false}
+        onClick={[Function]}
+        tooltip={undefined}
+      >
+        Save
+      </HeaderButton>
+      <HeaderButton
+        disabled={true}
+        onClick={undefined}
+        tooltip={undefined}
+      >
+        Download
+      </HeaderButton>
+      <HeaderButton
+        disabled={true}
+        onClick={undefined}
+        tooltip={undefined}
+      >
+        Fork
+      </HeaderButton>
+    </div>
+    <TitleEditor
+      canEdit={true}
+      githubUsername="example"
+      onSetTitle={[Function]}
+      title="Fake 1"
+    />
+  </div>
+  <div
+    className="Header-Gap"
+  />
+  <div
+    className="Header-Right"
+  >
+    <UserBar
+      onLogin={[Function]}
+      onLogout={[Function]}
+      user={
+        Object {
+          "githubUsername": "example",
+          "id": "test-ids",
+          "pads": Array [],
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`renders draft 1`] = `
+<div
+  className="Header"
+>
+  <div
+    className="Header-Left"
+  >
+    <HeaderLogo />
+    <div
+      className="Management-Buttons"
+    >
+      <HeaderButton
+        onClick={[Function]}
+      >
+        New
+      </HeaderButton>
+      <HeaderButton
+        disabled={false}
+        onClick={[Function]}
+        tooltip={undefined}
+      >
+        Save
+      </HeaderButton>
+      <HeaderButton
+        disabled={true}
+        onClick={[Function]}
+        tooltip="Save this pad to download it"
+      >
+        Download
+      </HeaderButton>
+      <HeaderButton
+        disabled={false}
+        onClick={[Function]}
+        tooltip={undefined}
+      >
+        Fork
+      </HeaderButton>
+    </div>
+    <TitleEditor
+      canEdit={true}
+      githubUsername="example"
+      onSetTitle={[Function]}
+      title="Fake 1"
+    />
+  </div>
+  <div
+    className="Header-Gap"
+  />
+  <div
+    className="Header-Right"
+  >
+    <UserBar
+      onLogin={[Function]}
+      onLogout={[Function]}
+      user={
+        Object {
+          "githubUsername": "example",
+          "id": "test-ids",
+          "pads": Array [],
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`renders own 1`] = `
+<div
+  className="Header"
+>
+  <div
+    className="Header-Left"
+  >
+    <HeaderLogo />
+    <div
+      className="Management-Buttons"
+    >
+      <HeaderButton
+        onClick={[Function]}
+      >
+        New
+      </HeaderButton>
+      <HeaderButton
+        disabled={true}
+        onClick={undefined}
+        tooltip="Already up to date"
+      >
+        Save
+      </HeaderButton>
+      <HeaderButton
+        disabled={false}
+        onClick={[Function]}
+        tooltip={undefined}
+      >
+        Download
+      </HeaderButton>
+      <HeaderButton
+        disabled={false}
+        onClick={[Function]}
+        tooltip={undefined}
+      >
+        Fork
+      </HeaderButton>
+    </div>
+    <TitleEditor
+      canEdit={true}
+      githubUsername="example"
+      onSetTitle={[Function]}
+      title="Fake 1"
+    />
+  </div>
+  <div
+    className="Header-Gap"
+  />
+  <div
+    className="Header-Right"
+  >
+    <UserBar
+      onLogin={[Function]}
+      onLogout={[Function]}
+      user={
+        Object {
+          "githubUsername": "example",
+          "id": "test-ids",
+          "pads": Array [],
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`renders undeployed 1`] = `
+<div
+  className="Header"
+>
+  <div
+    className="Header-Left"
+  >
+    <HeaderLogo />
+    <div
+      className="Management-Buttons"
+    >
+      <HeaderButton
+        onClick={[Function]}
+      >
+        New
+      </HeaderButton>
+      <HeaderButton
+        disabled={true}
+        onClick={undefined}
+        tooltip="Already up to date"
+      >
+        Save
+      </HeaderButton>
+      <HeaderButton
+        disabled={true}
+        onClick={undefined}
+        tooltip="Save this pad to download it"
+      >
+        Download
+      </HeaderButton>
+      <HeaderButton
+        disabled={true}
+        onClick={undefined}
+        tooltip="This pad is not saved yet"
+      >
+        Fork
+      </HeaderButton>
+    </div>
+    <TitleEditor
+      canEdit={true}
+      githubUsername="example"
+      onSetTitle={[Function]}
+      title="Fake 1"
+    />
+  </div>
+  <div
+    className="Header-Gap"
+  />
+  <div
+    className="Header-Right"
+  >
+    <UserBar
+      onLogin={[Function]}
+      onLogout={[Function]}
+      user={
+        Object {
+          "githubUsername": "example",
+          "id": "test-ids",
+          "pads": Array [],
+        }
+      }
+    />
+  </div>
+</div>
+`;
