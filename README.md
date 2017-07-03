@@ -35,6 +35,8 @@ Something is missing?
 Help Launchpad by creating more pads! Examples of the pads are available
 [in issues under corresponding label](https://github.com/apollographql/launchpad/issues?q=is%3Aopen+is%3Aissue+label%3A%22launchpad+example%22)
 
+[![Launchpad screenshot](screenshot.png)](https://launchpad.graphql.com/1jzxrj179)
+
 ## Development
 
 ### Running the frontend code
