@@ -30,6 +30,7 @@ This is a list of great pads deployed at Launchpad.
 - [Spotify API with Expo Snack UI](https://launchpad.graphql.com/pjwnq05l0) - how to fetch from the Spotify REST API with GraphQL, and then display it in a [React Native UI](https://snack.expo.io/ry2l_IXZW).
 - [RSVP management for events](https://launchpad.graphql.com/4nq37v3x9) - Shows multiple query mutations per Mutation type, as well as querying deeply nested data.
 - [GRPC](https://launchpad.graphql.com/mrwx0l4x9) - Example using [GRPC](http://www.grpc.io/)
+- [Fetching artists and events from Ticketmaster API](https://launchpad.graphql.com/9pw9nnkjr) - Fetch information about artists and events from the [Ticketmaster REST API](http://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/). Follow along with a workshop [here](https://github.com/stubailo/ticketmaster-workshop).
 
 Something is missing?
 [Create an issue!](https://github.com/apollographql/launchpad/issues/new)
