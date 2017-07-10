@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "Sashko Stubailo <sashko@stubailo.com>",
   "engines": {
-    "node" : ">=7.0.0 <8.0.0",
+    "node": ">=7.0.0 <8.0.0",
     "npm": ">=5.0.0 <6.0.0"
   },
   "dependencies": {
@@ -108,11 +108,10 @@
     "jest": "node scripts/test.js --env=jsdom",
     "jest-once": "node scripts/test.js --env=jsdom --ci --forceExit",
     "flow": "flow",
-    "eslint": "eslint ./frontend/",
+    "eslint": "eslint ./frontend/ && eslint ./server/",
     "check-prettier": "git ls-files | grep \"frontend\\|server\" | grep \"\\.(css\\|less\\|js\\|json)$\" | grep -v -f .eslintignore | xargs prettier-check --single-quote --trailing-comma all --write --write",
     "prettier": "git ls-files | grep \"frontend\\|server\" | grep \"\\.(css\\|less\\|js\\|json)$\" | grep -v -f .eslintignore | xargs prettier --single-quote --trailing-comma all --write --write",
     "test": "npm run check-prettier && npm run eslint && npm run flow && npm run jest-once",
-
     "heroku-postbuild": "npm run build-server"
   },
   "jest": {

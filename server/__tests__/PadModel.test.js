@@ -102,7 +102,8 @@ const otherPad = {
 };
 
 beforeAll(async () => {
-  let baseMongoUrl = process.env.MONGODB_URL || 'mongodb://127.0.0.1:27017';
+  let baseMongoUrl =
+    process.env.TEST_MONGODB_URL || 'mongodb://127.0.0.1:27017';
   mongoUrl = `${baseMongoUrl}/${createTestDatabaseName()}`;
   testContext = ((createTestContext(mongoUrl): any): GraphQLContext);
   await (await testContext.mongo.mongodb)

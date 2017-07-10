@@ -1,5 +1,9 @@
 /* @flow */
 
+/**
+ * @jest-environment node
+ */
+
 import React from 'react';
 import UserBar from '../Header/UserBar';
 import { mount } from 'enzyme';
