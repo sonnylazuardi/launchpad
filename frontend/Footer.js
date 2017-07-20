@@ -3,6 +3,7 @@
 import React from "react";
 import extendLogo from "../static/auth0-extend-logo.svg";
 import "./Footer.less";
+const prettier = require("prettier");
 
 type FooterProps = {|
   isDraft: boolean,
@@ -14,7 +15,8 @@ type FooterProps = {|
   onResetLinkClick: Event => any,
   onLogOpen: () => any,
   onLogClose: () => any,
-  onModalOpen: (type: "dependencies" | "secrets") => any
+  onModalOpen: (type: "dependencies" | "secrets") => any,
+  handleFooterPrettify: () => any
 |};
 
 export default class Footer extends React.Component {
@@ -119,11 +121,11 @@ export default class Footer extends React.Component {
           </div>
           <div
             className="footer-button"
-            onClick={() => console.log("clicked prettier")}
+            onClick={() => this.props.handleFooterPrettify()}
           >
             {/*first span should have class-name=prettier icon*/}
             <span />
-            <span>Prettier</span>
+            <span>Prettify</span>
           </div>
 
           {this.renderLogButton()}
