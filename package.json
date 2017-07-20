@@ -39,6 +39,7 @@
     "mdg-borealis": "^1.0.8",
     "mongodb": "^2.2.28",
     "node-fetch": "^1.7.1",
+    "prettier": "CompuIves/custom-prettier-codesandbox",
     "prismjs": "^1.6.0",
     "react": "^15.4.2",
     "react-apollo": "^1.0.0",
