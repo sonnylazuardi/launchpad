@@ -1,20 +1,20 @@
 /* @flow */
 
-import React, { Component } from "react";
-import type { Pad, User, Context } from "./types";
-import PadStorage from "./PadStorage";
-import Header from "./Header/Header";
-import Footer from "./Footer";
-import GraphiQLWrapper from "./GraphiQLWrapper";
-import Editor from "./Editor";
-import Logs from "./Logs";
-import ContextEditor from "./ContextEditor";
-import Dependencies from "./Dependencies";
-import Modal from "./Modal";
-import "./PadSplit.less";
-import "./Resizer.less";
-import SplitPane from "react-split-pane";
-const prettier = require("prettier");
+import React, { Component } from 'react';
+import type { Pad, User, Context } from './types';
+import PadStorage from './PadStorage';
+import Header from './Header/Header';
+import Footer from './Footer';
+import GraphiQLWrapper from './GraphiQLWrapper';
+import Editor from './Editor';
+import Logs from './Logs';
+import ContextEditor from './ContextEditor';
+import Dependencies from './Dependencies';
+import Modal from './Modal';
+import './PadSplit.less';
+import './Resizer.less';
+import SplitPane from 'react-split-pane';
+const prettier = require('prettier');
 
 type PadSplitProps = {|
   pad: Pad,
@@ -36,8 +36,8 @@ type PadSplitProps = {|
   onDownload: () => any
 |};
 
-type View = "editor" | "graphiql" | "both";
-type ModalType = "dependencies" | "secrets" | "onboarding";
+type View = 'editor' | 'graphiql' | 'both';
+type ModalType = 'dependencies' | 'secrets' | 'onboarding';
 
 export default class PadSplit extends Component {
   props: PadSplitProps;
@@ -50,16 +50,16 @@ export default class PadSplit extends Component {
   constructor(props: PadSplitProps) {
     super(props);
     let openModal = null;
-    let firstTime = PadStorage.getItem("global", "visited");
+    let firstTime = PadStorage.getItem('global', 'visited');
     if (!firstTime) {
-      openModal = "onboarding";
+      openModal = 'onboarding';
     }
-    let viewing = ((PadStorage.getItem(props.pad.id, "view"): any): ?View);
+    let viewing = ((PadStorage.getItem(props.pad.id, 'view'): any): ?View);
     if (!viewing) {
       if (window.innerWidth >= 1280) {
-        viewing = "both";
+        viewing = 'both';
       } else {
-        viewing = "editor";
+        viewing = 'editor';
       }
     }
     this.state = {
@@ -80,7 +80,7 @@ export default class PadSplit extends Component {
     this.setState({
       viewing: view
     });
-    PadStorage.setItem(this.props.pad.id, "view", view);
+    PadStorage.setItem(this.props.pad.id, 'view', view);
   };
 
   handleResetLinkClick = (evt: Event) => {
@@ -113,7 +113,7 @@ export default class PadSplit extends Component {
   };
 
   handleOnboardingModalClose = () => {
-    PadStorage.setItem("global", "visited", "true");
+    PadStorage.setItem('global', 'visited', 'true');
     this.handleModalClose();
   };
 
@@ -135,13 +135,13 @@ export default class PadSplit extends Component {
 
   hasEmptyContext() {
     return this.props.currentContext.some(
-      ({ value }) => value != null && value === ""
+      ({ value }) => value != null && value === ''
     );
   }
 
   showEmptyContext() {
     this.setState({
-      openModal: "secrets"
+      openModal: 'secrets'
     });
   }
 
@@ -152,7 +152,7 @@ export default class PadSplit extends Component {
   };
 
   componentWillReceiveProps(nextProps) {
-    console.log("padsplit props: ", this.props);
+    console.log('padsplit props: ', this.props);
     this.setState({
       currentCode: nextProps.currentCode
     });
@@ -162,7 +162,7 @@ export default class PadSplit extends Component {
     return [
       <Modal
         key="welcome"
-        isOpen={this.state.openModal === "onboarding"}
+        isOpen={this.state.openModal === 'onboarding'}
         onRequestClose={this.handleOnboardingModalClose}
         title="Welcome to Apollo Launchpad!"
       >
@@ -173,15 +173,15 @@ export default class PadSplit extends Component {
         </p>
 
         <p>
-          Visit the{" "}
+          Visit the{' '}
           <a
             href="https://github.com/apollographql/awesome-launchpad"
             target="_blank"
           >
             awesome-launchpad repository
-          </a>{" "}
+          </a>{' '}
           to see a list of examples and read the docs. For an introduction, read
-          the{" "}
+          the{' '}
           <a
             href="https://dev-blog.apollodata.com/introducing-launchpad-the-graphql-server-demo-platform-cc4e7481fcba"
             target="_blank"
@@ -203,7 +203,7 @@ export default class PadSplit extends Component {
       </Modal>,
       <Modal
         key="secrets"
-        isOpen={this.state.openModal === "secrets"}
+        isOpen={this.state.openModal === 'secrets'}
         onRequestClose={this.handleModalClose}
         title="Edit Server Secrets"
       >
@@ -214,7 +214,7 @@ export default class PadSplit extends Component {
       </Modal>,
       <Modal
         key="dependencies"
-        isOpen={this.state.openModal === "dependencies"}
+        isOpen={this.state.openModal === 'dependencies'}
         onRequestClose={this.handleModalClose}
         title="npm Dependencies"
       >
