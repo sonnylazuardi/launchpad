@@ -1,8 +1,8 @@
 /* @flow */
 
-import React from 'react';
-import extendLogo from '../static/auth0-extend-logo.svg';
-import './Footer.less';
+import React from "react";
+import extendLogo from "../static/auth0-extend-logo.svg";
+import "./Footer.less";
 
 type FooterProps = {|
   isDraft: boolean,
@@ -14,7 +14,7 @@ type FooterProps = {|
   onResetLinkClick: Event => any,
   onLogOpen: () => any,
   onLogClose: () => any,
-  onModalOpen: (type: 'dependencies' | 'secrets') => any,
+  onModalOpen: (type: "dependencies" | "secrets") => any
 |};
 
 export default class Footer extends React.Component {
@@ -34,10 +34,10 @@ export default class Footer extends React.Component {
       if (this.props.isDeployed) {
         resetSuffix = (
           <span>
-            Click to{' '}
+            Click to{" "}
             <a href="#" onClick={this.props.onResetLinkClick}>
               reset
-            </a>{' '}
+            </a>{" "}
             to saved version.
           </span>
         );
@@ -57,10 +57,10 @@ export default class Footer extends React.Component {
       return (
         <div className="Footer-ErrorWrapper Footer-ErrorWrapper--yellow">
           <code className="Footer-ErrorText">
-            Editing draft, save to deploy changes or{' '}
+            Editing draft, save to deploy changes or{" "}
             <a href="#" onClick={this.props.onResetLinkClick}>
               reset
-            </a>{' '}
+            </a>{" "}
             to saved version.
           </code>
         </div>
@@ -86,9 +86,9 @@ export default class Footer extends React.Component {
   }
 
   renderLogButton() {
-    let className = 'footer-button';
+    let className = "footer-button";
     if (!this.props.canSeeLogs) {
-      className += ' disabled';
+      className += " disabled";
     }
 
     return (
@@ -105,17 +105,25 @@ export default class Footer extends React.Component {
         <div className="Footer-Left">
           <div
             className="footer-button"
-            onClick={() => this.props.onModalOpen('secrets')}
+            onClick={() => this.props.onModalOpen("secrets")}
           >
             <span className="icon-lock" />
             <span>Secrets</span>
           </div>
           <div
             className="footer-button"
-            onClick={() => this.props.onModalOpen('dependencies')}
+            onClick={() => this.props.onModalOpen("dependencies")}
           >
             <span className="icon-paperclip" />
             <span>npm Deps</span>
+          </div>
+          <div
+            className="footer-button"
+            onClick={() => console.log("clicked prettier")}
+          >
+            {/*first span should have class-name=prettier icon*/}
+            <span />
+            <span>Prettier</span>
           </div>
 
           {this.renderLogButton()}

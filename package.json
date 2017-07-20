@@ -38,6 +38,7 @@
     "mdg-borealis": "^1.0.8",
     "mongodb": "^2.2.28",
     "node-fetch": "^1.7.1",
+    "prettier": "CompuIves/custom-prettier-codesandbox",
     "prismjs": "^1.6.0",
     "react": "^15.4.2",
     "react-apollo": "^1.0.0",
@@ -115,10 +116,7 @@
     "heroku-postbuild": "npm run build-server"
   },
   "jest": {
-    "collectCoverageFrom": [
-      "frontend/**/*.{js,jsx}",
-      "server/**/*.{js,jsx}"
-    ],
+    "collectCoverageFrom": ["frontend/**/*.{js,jsx}", "server/**/*.{js,jsx}"],
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "frontend/services/eject",
@@ -141,9 +139,7 @@
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
+    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     }
