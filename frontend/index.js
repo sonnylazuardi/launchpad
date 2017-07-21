@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import ReactDOM, { render } from 'react-dom';
 // might need to do import BrowserRouter as Router in below line (instead of just import Router)
-import { Router, Route, Link } from 'react-router-dom';
+import { Switch, Router, Route, Link } from 'react-router-dom';
 //import App from './App';
 import './index.less';
 import PadSplit from './PadSplit';
@@ -40,11 +40,18 @@ const apolloClient = new ApolloClient({
   networkInterface
 });
 
+const getPadContainer = function() {
+  return <PadContainer id={null} />;
+};
+
 render(
   // don't need to pass down history in react-router v4 according to stack overflow??
   <ApolloProvider client={apolloClient}>
     <Router history={history}>
-      <Route path="/list" component={ListContainer} />
+      <Switch>
+        <Route path="/list" component={ListContainer} />
+        <Route path="/new" component={getPadContainer} />
+      </Switch>
     </Router>
   </ApolloProvider>,
   document.getElementById('root')

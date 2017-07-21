@@ -1,6 +1,7 @@
 /* @flow */
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import type { Pad, User } from '../types';
 import HeaderLogo from './HeaderLogo';
 import UserBar from './UserBar';
@@ -20,7 +21,7 @@ export default class Header extends Component {
     onLogin: () => any,
     onLogout: () => any,
     onSetTitle: (title: string) => any,
-    onSetDescription: (description: string) => any,
+    onSetDescription: (description: string) => any
   |};
 
   renderDeployButton() {
@@ -106,8 +107,13 @@ export default class Header extends Component {
           <HeaderLogo />
 
           <div className="Management-Buttons">
+            {/*
             <HeaderButton onClick={() => (document.location.href = `/new`)}>
               New
+            </HeaderButton>
+            */}
+            <HeaderButton>
+              <Link to="/new">New</Link>
             </HeaderButton>
             {this.renderDeployButton()}
             {this.renderDownloadButton()}
@@ -123,7 +129,7 @@ export default class Header extends Component {
             canEdit={Boolean(
               !this.props.pad.user ||
                 (this.props.user &&
-                  this.props.pad.user.id === this.props.user.id),
+                  this.props.pad.user.id === this.props.user.id)
             )}
           />
         </div>
