@@ -18,23 +18,23 @@ const prettier = require('prettier');
 
 type PadSplitProps = {|
   pad: Pad,
-  user: ?User,
-  currentCode: string,
-  currentContext: Array<Context>,
-  isDeploying: boolean,
-  error: ?string,
-  onDeploy: () => any,
-  onReset: () => any,
-  onFork: () => any,
-  onCodeChange: string => any,
-  onContextChange: (Array<Context>) => any,
-  onLogin: () => any,
-  onLogout: () => any,
-  onSetTitle: (title: string) => any,
-  onSetDescription: (description: string) => any,
-  onSetDefaultQuery: (query: string) => any,
-  onDownload: () => any
-|};
+    user: ?User,
+      currentCode: string,
+        currentContext: Array < Context >,
+          isDeploying: boolean,
+            error: ?string,
+              onDeploy: () => any,
+                onReset: () => any,
+                  onFork: () => any,
+                    onCodeChange: string => any,
+                      onContextChange: (Array<Context>) => any,
+                        onLogin: () => any,
+                          onLogout: () => any,
+                            onSetTitle: (title: string) => any,
+                              onSetDescription: (description: string) => any,
+                                onSetDefaultQuery: (query: string) => any,
+                                  onDownload: () => any
+                                    |};
 
 type View = 'editor' | 'graphiql' | 'both';
 type ModalType = 'dependencies' | 'secrets' | 'onboarding';
@@ -44,7 +44,8 @@ export default class PadSplit extends Component {
   state: {
     viewing: View,
     isLogOpen: boolean,
-    openModal: ?ModalType
+    openModal: ?ModalType,
+    currentCode: String
   };
 
   constructor(props: PadSplitProps) {
@@ -146,17 +147,8 @@ export default class PadSplit extends Component {
   }
 
   handleFooterPrettify = () => {
-    this.setState({
-      currentCode: prettier.format(this.state.currentCode)
-    });
+    this.props.onCodeChange(prettier.format(this.state.currentCode, { singleQuote: true }));
   };
-
-  componentWillReceiveProps(nextProps) {
-    console.log('padsplit props: ', this.props);
-    this.setState({
-      currentCode: nextProps.currentCode
-    });
-  }
 
   renderModals() {
     return [
@@ -236,7 +228,7 @@ export default class PadSplit extends Component {
   renderEditors() {
     const canEdit = Boolean(
       !this.props.pad.user ||
-        (this.props.user && this.props.pad.user.id === this.props.user.id)
+      (this.props.user && this.props.pad.user.id === this.props.user.id)
     );
 
     return (
@@ -245,8 +237,7 @@ export default class PadSplit extends Component {
           <div className="PadSplit-Left">
             <div className="PadSplit-EditorWrapper">
               <Editor
-                /*code={this.props.currentCode}*/
-                code={this.state.currentCode}
+                code={this.props.currentCode}
                 canEdit={canEdit}
                 onChange={this.props.onCodeChange}
               />
@@ -254,7 +245,7 @@ export default class PadSplit extends Component {
             {canEdit
               ? null
               : <div className="editor-fork-banner">
-                  Log in and fork this pad in order to edit it.
+                Log in and fork this pad in order to edit it.
                 </div>}
             <div className="PadSplit-Logs">
               {this.renderLogs()}
