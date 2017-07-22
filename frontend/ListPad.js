@@ -1,21 +1,22 @@
 /* @flow */
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import type { Pad } from './types';
 import { getPrismHighlighter } from './services/CodeService';
 import './ListPad.less';
 
 type ListPadProps = {|
-  pad: Pad,
+  pad: Pad
 |};
 
 export default class ListPad extends Component {
   props: ListPadProps;
 
   state = ({
-    code: null,
+    code: null
   }: {
-    code: ?string,
+    code: ?string
   });
 
   componentDidMount() {
@@ -25,7 +26,7 @@ export default class ListPad extends Component {
   componentDidUpdate(nextProps: ListPadProps) {
     if (nextProps.pad.code !== this.props.pad.code) {
       this.setState({
-        code: null,
+        code: null
       });
       this.hilightCode();
     }
@@ -34,10 +35,10 @@ export default class ListPad extends Component {
   async hilightCode() {
     const code = (await getPrismHighlighter())(
       this.props.pad.code,
-      'javascript',
+      'javascript'
     );
     this.setState({
-      code,
+      code
     });
   }
 
@@ -47,7 +48,7 @@ export default class ListPad extends Component {
         <div
           className="ListPad-Code"
           dangerouslySetInnerHTML={{
-            __html: this.state.code,
+            __html: this.state.code
           }}
         />
       );
@@ -57,11 +58,14 @@ export default class ListPad extends Component {
   }
 
   render() {
+    console.log('pad list props', this.props);
     const pad = this.props.pad;
     const padUser = pad.user || {};
     return (
       <div className="ListPad">
-        <a className="ListPad-Link" href={`/${this.props.pad.id}`}>
+        <Link className="ListPad-Link" to={`${this.props.pad.id}`}>
+          Pads you created
+          {/*<a className="ListPad-Link" href={`/${this.props.pad.id}`}>*/}
           <div className="ListPad-Header">
             <div className="ListPad-HeaderUsername">
               {padUser.githubUsername || 'Unknown'}
@@ -71,7 +75,7 @@ export default class ListPad extends Component {
             </div>
           </div>
           {this.renderCode()}
-        </a>
+        </Link>
       </div>
     );
   }
