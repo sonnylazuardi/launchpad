@@ -49,6 +49,12 @@ render(
   <ApolloProvider client={apolloClient}>
     <Router history={history}>
       <Switch>
+        <Route
+          path="/"
+          render={() => {
+            return <PadContainer id={null} />;
+          }}
+        />
         <Route path="/list" component={ListContainer} />
         <Route
           path="/new"
