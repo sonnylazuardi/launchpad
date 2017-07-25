@@ -29,7 +29,7 @@ type PadContainerProps = {|
               deployedCode: string,
               context: Array < Context >,
               dependencies: Array < string >,
-      |},
+    |},
     },
   }) => Promise < ApolloMutationResult < 'pad', PadType >>,
   updateDraft: ({
