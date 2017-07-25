@@ -40,7 +40,7 @@ const apolloClient = new ApolloClient({
   networkInterface
 });
 
-const getPadContainer = function(id) {
+const getPadContainer = function () {
   return <PadContainer id={null} />;
 };
 
@@ -49,29 +49,27 @@ render(
   <ApolloProvider client={apolloClient}>
     <Router history={history}>
       <Switch>
+        <Route exact path="/list" component={ListContainer} />
         <Route
-          path="/"
-          render={() => {
-            return <PadContainer id={null} />;
-          }}
-        />
-        <Route path="/list" component={ListContainer} />
-        <Route
-          path="/new"
+          exact path="/"
           render={() => {
             return <PadContainer id={null} />;
           }}
         />
         <Route
-          path="/:id"
+          exact path="/new"
+          render={() => {
+            return <PadContainer id={null} />;
+          }}
+        />
+        <Route
+          exact path="/:id"
           render={id => {
-            console.log('id: ', id);
             return <PadContainer id={id.match.params.id} />;
           }}
         />
-        {/*<Route path="/:id" component={getPadContainer()*/}
       </Switch>
     </Router>
-  </ApolloProvider>,
+  </ApolloProvider >,
   document.getElementById('root')
 );

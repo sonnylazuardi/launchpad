@@ -4,11 +4,11 @@ import React, { Component } from 'react';
 import { gql, graphql, compose, withApollo } from 'react-apollo';
 import type {
   Pad as PadType,
-  User as UserType,
-  Context,
-  ApolloData,
-  ApolloMutationResult,
-  DeployPayload,
+    User as UserType,
+    Context,
+    ApolloData,
+    ApolloMutationResult,
+    DeployPayload,
 } from './types';
 import { getLock } from './services/Auth0LockService';
 import { download } from './services/EjectService';
@@ -18,59 +18,59 @@ import { LoadingSpinner } from './LoadingSpinner';
 
 type PadContainerProps = {|
   id: string,
-  client: any,
-  padData: ApolloData<'pad', PadType>,
-  meData: ApolloData<'me', UserType>,
-  updatePad: ({
-    variables: {
-      pad: {|
-        id: ?string,
-        code: string,
-        deployedCode: string,
-        context: Array<Context>,
-        dependencies: Array<string>,
+    client: any,
+      padData: ApolloData < 'pad', PadType >,
+        meData: ApolloData < 'me', UserType >,
+          updatePad: ({
+            variables: {
+              pad: {|
+              id: ?string,
+              code: string,
+              deployedCode: string,
+              context: Array < Context >,
+              dependencies: Array < string >,
       |},
     },
-  }) => Promise<ApolloMutationResult<'pad', PadType>>,
+  }) => Promise < ApolloMutationResult < 'pad', PadType >>,
   updateDraft: ({
     variables: {
       pad: {|
-        id: ?string,
-        code: string,
-        deployedCode: string,
-        context: Array<Context>,
-        dependencies: Array<string>,
+      id: ?string,
+      code: string,
+      deployedCode: string,
+      context: Array < Context >,
+      dependencies: Array < string >,
       |},
     },
-  }) => Promise<ApolloMutationResult<'pad', PadType>>,
+  }) => Promise < ApolloMutationResult < 'pad', PadType >>,
   forkPad: ({
     variables: {|
-      id: string,
+    id: string,
     |},
-  }) => Promise<ApolloMutationResult<'pad', PadType>>,
+  }) => Promise < ApolloMutationResult < 'pad', PadType >>,
   createPad: ({
     variables: {
       pad: {|
-        code: string,
-        deployedCode: string,
-        context: Array<Context>,
-        dependencies: Array<string>,
+      code: string,
+      deployedCode: string,
+      context: Array < Context >,
+      dependencies: Array < string >,
       |},
     },
-  }) => Promise<ApolloMutationResult<'pad', PadType>>,
+  }) => Promise < ApolloMutationResult < 'pad', PadType >>,
   deleteDraft: ({
     variables: {
       id: string,
     },
-  }) => Promise<ApolloMutationResult<'pad', PadType>>,
-  updateMetadata: ({
+  }) => Promise < ApolloMutationResult < 'pad', PadType >>,
+    updateMetadata: ({
     variables: {
       id: string,
       title?: string,
       description?: string,
       defaultQuery?: string,
     },
-  }) => Promise<ApolloMutationResult<'pad', PadType>>,
+  }) => Promise < ApolloMutationResult < 'pad', PadType >>,
 |};
 
 class PadContainer extends Component {
@@ -140,9 +140,9 @@ class PadContainer extends Component {
     this.props.meData.refetch();
   };
 
-  handleCodeChange = (newCode: string) => {};
+  handleCodeChange = (newCode: string) => { };
 
-  handleContextChange = (newContext: Array<Context>) => {};
+  handleContextChange = (newContext: Array<Context>) => { };
 
   handleDeploy = (target: 'deploy' | 'draft', payload: DeployPayload) => {
     if (!this.state.isDeploying) {
@@ -189,6 +189,7 @@ class PadContainer extends Component {
   }
 
   afterDeploy(target, result) {
+    console.log('in afterDeploy');
     if (
       result &&
       target === 'deploy' &&
@@ -361,63 +362,63 @@ class PadContainer extends Component {
   }
 
   getErrorMessage(): ?string {
-    if (this.props.padData.error) {
-      return this.props.padData.error.message;
-    } else if (this.props.meData.error) {
-      return this.props.meData.error.message;
-    } else {
-      return null;
-    }
+  if (this.props.padData.error) {
+    return this.props.padData.error.message;
+  } else if (this.props.meData.error) {
+    return this.props.meData.error.message;
+  } else {
+    return null;
   }
+}
 
-  render() {
-    if (this.isLoading()) {
-      return (
-        <div className="PadContainer-Loading">
-          <LoadingSpinner size="medium" />
-        </div>
-      );
-    } else if (this.hasError()) {
-      return (
-        <div>
-          {this.getErrorMessage()}
-        </div>
-      );
+render() {
+  if (this.isLoading()) {
+    return (
+      <div className="PadContainer-Loading">
+        <LoadingSpinner size="medium" />
+      </div>
+    );
+  } else if (this.hasError()) {
+    return (
+      <div>
+        {this.getErrorMessage()}
+      </div>
+    );
+  } else {
+    let pad = this.props.padData.pad;
+    const me = this.props.meData.me;
+
+    if (pad.draft) {
+      pad = {
+        ...pad.draft,
+        isDraft: true,
+        isDeployed: pad.url != null,
+      };
     } else {
-      let pad = this.props.padData.pad;
-      const me = this.props.meData.me;
-
-      if (pad.draft) {
-        pad = {
-          ...pad.draft,
-          isDraft: true,
-          isDeployed: pad.url != null,
-        };
-      } else {
-        pad = {
-          ...pad,
-          isDraft: false,
-          isDeployed: true,
-        };
-      }
-
-      return (
-        <Pad
-          pad={pad}
-          user={me}
-          isDeploying={this.state.isDeploying}
-          onDeploy={this.handleDeploy}
-          onFork={this.handleFork}
-          onForkDraft={this.handleForkDraft}
-          onDownload={this.handleDownload}
-          onReset={this.handleReset}
-          onLogin={this.handleLogin}
-          onLogout={this.handleLogout}
-          onUpdateMetadata={this.handleUpdateMetadata}
-        />
-      );
+      pad = {
+        ...pad,
+        isDraft: false,
+        isDeployed: true,
+      };
     }
+
+    return (
+      <Pad
+        pad={pad}
+        user={me}
+        isDeploying={this.state.isDeploying}
+        onDeploy={this.handleDeploy}
+        onFork={this.handleFork}
+        onForkDraft={this.handleForkDraft}
+        onDownload={this.handleDownload}
+        onReset={this.handleReset}
+        onLogin={this.handleLogin}
+        onLogout={this.handleLogout}
+        onUpdateMetadata={this.handleUpdateMetadata}
+      />
+    );
   }
+}
 }
 
 const padFragments = gql`
