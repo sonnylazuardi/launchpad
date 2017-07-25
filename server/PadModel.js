@@ -448,6 +448,37 @@ const PadModel = {
     };
   },
 
+  async deletePad(
+    id: string,
+    context: GraphQLContext,
+  ): Promise<{ ok: true, pad: null } | { ok: false, reason: string }> {
+    let pad = await PadModel.getById(id, context);
+
+    if (!pad) {
+      return {
+        ok: false,
+        reason: 'Pad does not exist',
+      };
+    }
+
+    const user = UserModel.me(context);
+
+    if (UserModel.canUpdatePad(user, pad, context)) {
+      const collection = await context.mongo.pads();
+      await collection.delete({ id });
+
+      return {
+        ok: true,
+        pad: null,
+      };
+    } else {
+      return {
+        ok: false,
+        reason: 'Can only delete own pads',
+      };
+    }
+  },
+
   async updatePadMetadata(
     { id, ...input }: PadMetadataInput,
     context: GraphQLContext,

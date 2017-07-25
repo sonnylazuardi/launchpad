@@ -1,6 +1,7 @@
 /* @flow */
 
 import { makeExecutableSchema } from 'graphql-tools';
+import { GraphQLDateTime } from 'graphql-iso-date';
 import type {
   User,
   Pad,
@@ -13,6 +14,8 @@ import UserModel from './UserModel';
 import PadModel from './PadModel';
 
 const typeDefs = `
+  scalar DateTime
+
   type User {
     id: String!
     githubUsername: String
@@ -43,6 +46,8 @@ const typeDefs = `
     defaultQuery: String
     defaultVariables: String
     token: String
+    createdAt: DateTime!
+    modifiedAt: DateTime!
   }
 
   input ContextInput {
@@ -85,6 +90,7 @@ const typeDefs = `
     forkPad(id: ID!): Pad
     updateDraft(pad: PadInput!): Pad
     deleteDraft(id: ID!): Pad
+    deletePad(id: ID!): Pad
     updatePadMetadata(input: PadMetadataInput!): Pad
   }
 `;
@@ -98,12 +104,15 @@ type Resolver<Type> = {
 };
 
 type Resolvers = {
+  DateTime: typeof GraphQLDateTime,
   Query: Resolver<any>,
   Mutation: Resolver<any>,
   User: Resolver<User>,
 };
 
 const resolvers: Resolvers = {
+  DateTime: GraphQLDateTime,
+
   Query: {
     async me(_, args: any, context: GraphQLContext): Promise<?User> {
       return UserModel.me(context);
@@ -197,6 +206,7 @@ const resolvers: Resolvers = {
         throw new Error(result.reason);
       }
     },
+    GraphQLDateTime,
   },
 
   User: {

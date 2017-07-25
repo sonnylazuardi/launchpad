@@ -19,6 +19,7 @@ type Collection<Type> = {
     document: any,
     options?: any,
   ) => Promise<WriteOpResult<Type>>,
+  delete: (query: any, options?: any) => Promise<WriteOpResult<Type>>,
 };
 
 export default class MongoProvider {
