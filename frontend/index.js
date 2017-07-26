@@ -14,11 +14,11 @@ import history from './history';
 import {
   ApolloClient,
   ApolloProvider,
-  createNetworkInterface
+  createNetworkInterface,
 } from 'react-apollo';
 
 const networkInterface = createNetworkInterface({
-  uri: process.env.REACT_APP_LAUNCHPAD_API_URL
+  uri: process.env.REACT_APP_LAUNCHPAD_API_URL,
 });
 
 networkInterface.use([
@@ -32,15 +32,15 @@ networkInterface.use([
         req.options.headers['authorization'] = `Bearer: ${token}`;
       }
       next();
-    }
-  }
+    },
+  },
 ]);
 
 const apolloClient = new ApolloClient({
-  networkInterface
+  networkInterface,
 });
 
-const getPadContainer = function () {
+const getPadContainer = function() {
   return <PadContainer id={null} />;
 };
 
@@ -51,25 +51,28 @@ render(
       <Switch>
         <Route exact path="/list" component={ListContainer} />
         <Route
-          exact path="/"
+          exact
+          path="/"
           render={() => {
             return <PadContainer id={null} />;
           }}
         />
         <Route
-          exact path="/new"
+          exact
+          path="/new"
           render={() => {
             return <PadContainer id={null} />;
           }}
         />
         <Route
-          exact path="/:id"
+          exact
+          path="/:id"
           render={id => {
             return <PadContainer id={id.match.params.id} />;
           }}
         />
       </Switch>
     </Router>
-  </ApolloProvider >,
-  document.getElementById('root')
+  </ApolloProvider>,
+  document.getElementById('root'),
 );

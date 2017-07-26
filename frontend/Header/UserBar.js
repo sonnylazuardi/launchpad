@@ -84,7 +84,6 @@ render() {
             Sign out
             </HeaderDropdownButton>
           <HeaderDropdownButton>
-            {/*<a href="/list">Pads you created</a>*/}
             <Link to="/list">Pads you created</Link>
           </HeaderDropdownButton>
         </HeaderDropdown>
