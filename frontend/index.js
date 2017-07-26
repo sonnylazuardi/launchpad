@@ -10,6 +10,8 @@ import PadSplit from './PadSplit';
 import PadContainer from './PadContainer';
 import ListContainer from './ListContainer';
 import history from './history';
+import {Routes} from './Routes';
+
 
 import {
   ApolloClient,
@@ -47,31 +49,8 @@ const getPadContainer = function() {
 render(
   // don't need to pass down history in react-router v4 according to stack overflow??
   <ApolloProvider client={apolloClient}>
-    <Router history={history}>
-      <Switch>
-        <Route exact path="/list" component={ListContainer} />
-        <Route
-          exact
-          path="/"
-          render={() => {
-            return <PadContainer id={null} />;
-          }}
-        />
-        <Route
-          exact
-          path="/new"
-          render={() => {
-            return <PadContainer id={null} />;
-          }}
-        />
-        <Route
-          exact
-          path="/:id"
-          render={id => {
-            return <PadContainer id={id.match.params.id} />;
-          }}
-        />
-      </Switch>
+    <Router routes={Routes} history={history}>
+      {Routes}
     </Router>
   </ApolloProvider>,
   document.getElementById('root'),
