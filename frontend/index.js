@@ -39,6 +39,7 @@ networkInterface.use([
 ]);
 
 const apolloClient = new ApolloClient({
+  ssrMode: true,
   networkInterface,
 });
 
