@@ -190,18 +190,6 @@ class PadContainer extends Component {
 
   afterDeploy(target, result) {
     console.log('in afterDeploy');
-    if (
-      result &&
-      target === 'deploy' &&
-      document.location.pathname === '/new'
-    ) {
-      window.history.pushState(
-        {},
-        'Apollo Launchpad',
-        `/${result.data.pad.id}`,
-      );
-    }
-
     if (this.state.nextDeploy) {
       const nextDeploy = this.state.nextDeploy;
       this.setState(
