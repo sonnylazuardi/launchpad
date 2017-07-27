@@ -7,16 +7,16 @@ import { getPrismHighlighter } from './services/CodeService';
 import './ListPad.less';
 
 type ListPadProps = {|
-  pad: Pad
+  pad: Pad,
 |};
 
 export default class ListPad extends Component {
   props: ListPadProps;
 
   state = ({
-    code: null
+    code: null,
   }: {
-    code: ?string
+    code: ?string,
   });
 
   componentDidMount() {
@@ -26,7 +26,7 @@ export default class ListPad extends Component {
   componentDidUpdate(nextProps: ListPadProps) {
     if (nextProps.pad.code !== this.props.pad.code) {
       this.setState({
-        code: null
+        code: null,
       });
       this.hilightCode();
     }
@@ -35,10 +35,10 @@ export default class ListPad extends Component {
   async hilightCode() {
     const code = (await getPrismHighlighter())(
       this.props.pad.code,
-      'javascript'
+      'javascript',
     );
     this.setState({
-      code
+      code,
     });
   }
 
@@ -48,7 +48,7 @@ export default class ListPad extends Component {
         <div
           className="ListPad-Code"
           dangerouslySetInnerHTML={{
-            __html: this.state.code
+            __html: this.state.code,
           }}
         />
       );

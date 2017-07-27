@@ -7,90 +7,90 @@ import './HeaderButton.less';
 
 export default class HeaderButton extends Component {
   props: {|
-  onClick?: (e: Event) => any,
+    onClick?: (e: Event) => any,
     to: String,
-      disabled ?: boolean,
-      active ?: boolean,
-      tooltip ?: Children,
-      children ?: Children,
+    disabled?: boolean,
+    active?: boolean,
+    tooltip?: Children,
+    children?: Children,
   |};
 
-state = ({
-  isHovered: false,
-}: {|
-  isHovered: boolean,
+  state = ({
+    isHovered: false,
+  }: {|
+    isHovered: boolean,
   |});
 
-handleMouseOver = () => {
-  this.setState({
-    isHovered: true,
-  });
-};
+  handleMouseOver = () => {
+    this.setState({
+      isHovered: true,
+    });
+  };
 
-handleMouseOut = () => {
-  this.setState({
-    isHovered: false,
-  });
-};
+  handleMouseOut = () => {
+    this.setState({
+      isHovered: false,
+    });
+  };
 
-defaultProps = {
-  disabled: false,
-};
+  defaultProps = {
+    disabled: false,
+  };
 
-renderTooltip() {
-  if (this.props.tooltip) {
-    let tooltipClassName = 'HeaderButton-Tooltip';
-    if (this.state.isHovered) {
-      tooltipClassName += ' HeaderButton-Tooltip--show';
+  renderTooltip() {
+    if (this.props.tooltip) {
+      let tooltipClassName = 'HeaderButton-Tooltip';
+      if (this.state.isHovered) {
+        tooltipClassName += ' HeaderButton-Tooltip--show';
+      }
+      return (
+        <div className={tooltipClassName}>
+          {this.props.tooltip}
+        </div>
+      );
+    } else {
+      return null;
     }
+  }
+
+  render() {
+    let tooltipHandlers;
+    if (this.props.tooltip) {
+      tooltipHandlers = {
+        onMouseOver: this.handleMouseOver,
+        onMouseOut: this.handleMouseOut,
+      };
+    } else {
+      tooltipHandlers = {};
+    }
+
+    let buttonClassName = 'HeaderButton';
+
+    if (this.props.disabled) {
+      buttonClassName += ' HeaderButton--disabled';
+    }
+
+    if (this.props.active) {
+      buttonClassName += ' HeaderButton--active';
+    }
+
+    let Component;
+    const componentProps = {};
+    if (this.props.to) {
+      Component = Link;
+      componentProps.to = this.props.to;
+    } else {
+      Component = 'button';
+      componentProps.onClick = this.props.onClick;
+    }
+
     return (
-      <div className={tooltipClassName}>
-        {this.props.tooltip}
-      </div>
+      <Component className={buttonClassName} {...componentProps}>
+        <div className="HeaderButton-Inner" {...tooltipHandlers}>
+          {this.props.children}
+        </div>
+        {this.renderTooltip()}
+      </Component>
     );
-  } else {
-    return null;
   }
-}
-
-render() {
-  let tooltipHandlers;
-  if (this.props.tooltip) {
-    tooltipHandlers = {
-      onMouseOver: this.handleMouseOver,
-      onMouseOut: this.handleMouseOut,
-    };
-  } else {
-    tooltipHandlers = {};
-  }
-
-  let buttonClassName = 'HeaderButton';
-
-  if (this.props.disabled) {
-    buttonClassName += ' HeaderButton--disabled';
-  }
-
-  if (this.props.active) {
-    buttonClassName += ' HeaderButton--active';
-  }
-
-  let Component;
-  const componentProps = {};
-  if (this.props.to) {
-    Component = Link;
-    componentProps.to = this.props.to;
-  } else {
-    Component = 'button';
-    componentProps.onClick = this.props.onClick;
-  }
-
-  return (
-    <Component className={buttonClassName} {...componentProps}>
-      <div className="HeaderButton-Inner" {...tooltipHandlers}>
-        {this.props.children}
-      </div>
-      {this.renderTooltip()}
-    </Component>
-  );
-}
 }
