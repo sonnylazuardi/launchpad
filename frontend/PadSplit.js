@@ -19,23 +19,23 @@ import SplitPane from 'react-split-pane';
 
 type PadSplitProps = {|
   pad: Pad,
-    user: ?User,
-      currentCode: string,
-        currentContext: Array < Context >,
-          isDeploying: boolean,
-            error: ?string,
-              onDeploy: () => any,
-                onReset: () => any,
-                  onFork: () => any,
-                    onCodeChange: string => any,
-                      onContextChange: (Array<Context>) => any,
-                        onLogin: () => any,
-                          onLogout: () => any,
-                            onSetTitle: (title: string) => any,
-                              onSetDescription: (description: string) => any,
-                                onSetDefaultQuery: (query: string) => any,
-                                  onDownload: () => any
-                                    |};
+  user: ?User,
+  currentCode: string,
+  currentContext: Array < Context >,
+  isDeploying: boolean,
+  error: ?string,
+  onDeploy: () => any,
+  onReset: () => any,
+  onFork: () => any,
+  onCodeChange: string => any,
+  onContextChange: (Array<Context>) => any,
+  onLogin: () => any,
+  onLogout: () => any,
+  onSetTitle: (title: string) => any,
+  onSetDescription: (description: string) => any,
+  onSetDefaultQuery: (query: string) => any,
+  onDownload: () => any
+|};
 
 type View = 'editor' | 'graphiql' | 'both';
 type ModalType = 'dependencies' | 'secrets' | 'onboarding';
