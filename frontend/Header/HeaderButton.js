@@ -8,7 +8,6 @@ import './HeaderButton.less';
 export default class HeaderButton extends Component {
   props: {|
     onClick?: (e: Event) => any,
-    to: String,
     disabled?: boolean,
     active?: boolean,
     tooltip?: Children,
