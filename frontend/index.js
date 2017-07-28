@@ -1,15 +1,11 @@
 /* @flow */
 
-import React, { Component } from 'react';
-import ReactDOM, { render } from 'react-dom';
-// might need to do import BrowserRouter as Router in below line (instead of just import Router)
-import { Switch, Router, Route, Link, BrowserRouter } from 'react-router-dom';
-//import App from './App';
+import React from 'react';
+import { render } from 'react-dom';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import './index.less';
-import PadSplit from './PadSplit';
 import PadContainer from './PadContainer';
 import ListContainer from './ListContainer';
-import history from './history';
 
 import {
   ApolloClient,
@@ -41,7 +37,6 @@ const apolloClient = new ApolloClient({
 });
 
 render(
-  // don't need to pass down history in react-router v4 according to stack overflow??
   <ApolloProvider client={apolloClient}>
     <BrowserRouter>
       <Switch>

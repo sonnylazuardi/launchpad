@@ -1,7 +1,6 @@
 /* @flow */
 
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import type { Pad, User } from '../types';
 import HeaderLogo from './HeaderLogo';
 import UserBar from './UserBar';
@@ -107,9 +106,7 @@ export default class Header extends Component {
           <HeaderLogo />
 
           <div className="Management-Buttons">
-            <HeaderButton>
-              <Link to="/new">New</Link>
-            </HeaderButton>
+            <HeaderButton Link to="/new">New</HeaderButton>
             {this.renderDeployButton()}
             {this.renderDownloadButton()}
             {this.renderForkButton()}

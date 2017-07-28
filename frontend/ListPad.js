@@ -64,7 +64,6 @@ export default class ListPad extends Component {
       <div className="ListPad">
         <Link className="ListPad-Link" to={`${this.props.pad.id}`}>
           Pads you created
-          {/*<a className="ListPad-Link" href={`/${this.props.pad.id}`}>*/}
           <div className="ListPad-Header">
             <div className="ListPad-HeaderUsername">
               {padUser.githubUsername || 'Unknown'}
