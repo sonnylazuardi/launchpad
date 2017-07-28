@@ -21,7 +21,7 @@ type PadSplitProps = {|
   pad: Pad,
   user: ?User,
   currentCode: string,
-  currentContext: Array < Context >,
+  currentContext: Array<Context>,
   isDeploying: boolean,
   error: ?string,
   onDeploy: () => any,
@@ -34,7 +34,7 @@ type PadSplitProps = {|
   onSetTitle: (title: string) => any,
   onSetDescription: (description: string) => any,
   onSetDefaultQuery: (query: string) => any,
-  onDownload: () => any
+  onDownload: () => any,
 |};
 
 type View = 'editor' | 'graphiql' | 'both';
@@ -46,7 +46,7 @@ export default class PadSplit extends Component {
     viewing: View,
     isLogOpen: boolean,
     openModal: ?ModalType,
-    currentCode: String
+    currentCode: String,
   };
 
   constructor(props: PadSplitProps) {
@@ -68,7 +68,7 @@ export default class PadSplit extends Component {
       viewing: viewing,
       isLogOpen: false,
       currentCode: this.props.currentCode,
-      openModal
+      openModal,
     };
   }
 
@@ -80,7 +80,7 @@ export default class PadSplit extends Component {
 
   handleChangeViewing = (view: View) => {
     this.setState({
-      viewing: view
+      viewing: view,
     });
     PadStorage.setItem(this.props.pad.id, 'view', view);
   };
@@ -92,25 +92,25 @@ export default class PadSplit extends Component {
 
   handleLogOpen = () => {
     this.setState({
-      isLogOpen: true
+      isLogOpen: true,
     });
   };
 
   handleLogClose = () => {
     this.setState({
-      isLogOpen: false
+      isLogOpen: false,
     });
   };
 
   handleModalOpen = (type: ModalType) => {
     this.setState({
-      openModal: type
+      openModal: type,
     });
   };
 
   handleModalClose = () => {
     this.setState({
-      openModal: null
+      openModal: null,
     });
   };
 
@@ -137,18 +137,20 @@ export default class PadSplit extends Component {
 
   hasEmptyContext() {
     return this.props.currentContext.some(
-      ({ value }) => value != null && value === ''
+      ({ value }) => value != null && value === '',
     );
   }
 
   showEmptyContext() {
     this.setState({
-      openModal: 'secrets'
+      openModal: 'secrets',
     });
   }
 
   handleFooterPrettify = () => {
-    this.props.onCodeChange(prettier.format(this.state.currentCode, { singleQuote: true }));
+    this.props.onCodeChange(
+      prettier.format(this.state.currentCode, { singleQuote: true }),
+    );
   };
 
   renderModals() {
@@ -212,7 +214,7 @@ export default class PadSplit extends Component {
         title="npm Dependencies"
       >
         <Dependencies dependencies={this.props.pad.dependencies} />
-      </Modal>
+      </Modal>,
     ];
   }
 
@@ -229,7 +231,7 @@ export default class PadSplit extends Component {
   renderEditors() {
     const canEdit = Boolean(
       !this.props.pad.user ||
-      (this.props.user && this.props.pad.user.id === this.props.user.id)
+        (this.props.user && this.props.pad.user.id === this.props.user.id),
     );
 
     return (
@@ -246,7 +248,7 @@ export default class PadSplit extends Component {
             {canEdit
               ? null
               : <div className="editor-fork-banner">
-                Log in and fork this pad in order to edit it.
+                  Log in and fork this pad in order to edit it.
                 </div>}
             <div className="PadSplit-Logs">
               {this.renderLogs()}
