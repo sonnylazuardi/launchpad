@@ -58,7 +58,6 @@ export default class ListPad extends Component {
   }
 
   render() {
-    console.log('pad list props', this.props);
     const pad = this.props.pad;
     const padUser = pad.user || {};
     return (

@@ -40,14 +40,10 @@ const apolloClient = new ApolloClient({
   networkInterface,
 });
 
-const getPadContainer = function() {
-  return <PadContainer id={null} />;
-};
-
 render(
   // don't need to pass down history in react-router v4 according to stack overflow??
   <ApolloProvider client={apolloClient}>
-      <BrowserRouter>
+    <BrowserRouter>
       <Switch>
         <Route exact path="/list" component={ListContainer} />
         <Route

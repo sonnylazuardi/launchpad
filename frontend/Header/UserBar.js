@@ -37,7 +37,6 @@ export default class UserBar extends Component {
   };
 
   handleOpenUserDropdown = (e: Event) => {
-    console.log('e: ', e);
     e && e.preventDefault();
 
     this.setState({
