@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import { gql, graphql, compose, withApollo } from 'react-apollo';
+import { Helmet } from 'react-helmet';
 import type {
   Pad as PadType,
   User as UserType,
@@ -71,6 +72,13 @@ type PadContainerProps = {|
       defaultQuery?: string,
     },
   }) => Promise<ApolloMutationResult<'pad', PadType>>,
+  /*
+  updateMetaTags: ({
+    variables: {
+      title: String
+    }
+  })
+  */
 |};
 
 class PadContainer extends Component {
@@ -309,11 +317,30 @@ class PadContainer extends Component {
     }
   };
 
+  updateMetaTagTitle = (title: String) => {
+    console.log('in updateMetaTagTitle')
+    const metaTitle = title;
+      <Helmet
+        meta={[ 
+          {title: metaTitle}
+         ]}
+      />
+  }
+
   handleUpdateMetadata = async (input: {
     title?: string,
     description?: string,
     defaultQuery?: string,
   }) => {
+    console.log('in handleUpdateMetaData', input)
+    if (input.title) {
+      //this.updateMetaTagTitle(input.title);
+      //console.log('input.title: ', input.title, 'typeof input.title: ', typeof input.title)
+      //this.props.updateMetaTags(input.title)
+      const title = input.title;
+      this.updateMetaTagTitle(title);
+    
+    }
     if (!this.state.isDeploying) {
       this.setState({
         isDeploying: true,
@@ -402,6 +429,7 @@ class PadContainer extends Component {
           onLogin={this.handleLogin}
           onLogout={this.handleLogout}
           onUpdateMetadata={this.handleUpdateMetadata}
+          updateMetaTags={this.props.updateMetaTags}
         />
       );
     }
