@@ -12,6 +12,7 @@ export default class HeaderButton extends Component {
     active?: boolean,
     tooltip?: Children,
     children?: Children,
+    to?: string,
   |};
 
   state = ({
