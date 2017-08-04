@@ -51,15 +51,15 @@ render(
         <Route
           exact
           path="/new"
-          render={() => {
-            return <PadContainer id={null} />;
+          render={({ match, history }) => {
+            return <PadContainer id={null} history={history} />;
           }}
         />
         <Route
           exact
           path="/:id"
-          render={id => {
-            return <PadContainer id={id.match.params.id} />;
+          render={({ match, history }) => {
+            return <PadContainer id={match.params.id} history={history} />;
           }}
         />
       </Switch>
