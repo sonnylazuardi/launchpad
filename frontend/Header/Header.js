@@ -106,9 +106,7 @@ export default class Header extends Component {
           <HeaderLogo />
 
           <div className="Management-Buttons">
-            <HeaderButton onClick={() => (document.location.href = `/new`)}>
-              New
-            </HeaderButton>
+            <HeaderButton to="/new">New</HeaderButton>
             {this.renderDeployButton()}
             {this.renderDownloadButton()}
             {this.renderForkButton()}
