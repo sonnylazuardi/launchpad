@@ -1,7 +1,7 @@
 /* @flow */
 
 import React, { Component } from 'react';
-import prettier from 'prettier';
+//import prettier from 'prettier';
 import type { Pad, User, Context } from './types';
 import PadStorage from './PadStorage';
 import Header from './Header/Header';
@@ -15,7 +15,7 @@ import Modal from './Modal';
 import './PadSplit.less';
 import './Resizer.less';
 import SplitPane from 'react-split-pane';
-//const prettier = require('prettier');
+import * as prettier from '../prettierBundle/prettier.js';
 
 type PadSplitProps = {|
   pad: Pad,
