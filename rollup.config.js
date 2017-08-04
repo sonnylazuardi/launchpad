@@ -4,21 +4,25 @@ export default [
   { entry: 'node_modules/prettier/index.js',
     dest: 'prettierBundle/prettier.js',
     format: 'iife',
+    moduleName: 'prettier',
     sourceMap: 'inline',
   }, {
     entry: 'node_modules/prettier/parser-babylon.js',
     dest: 'prettierBundle/prettier.js',
     format: 'iife',
+    moduleName: 'prettier',
     sourceMap: 'inline'
   }, {
     entry: 'node_modules/prettier/parser-json.js',
     dest: 'prettierBundle/prettier.js',
     format: 'iife',
+    moduleName: 'prettier',
     sourceMap: 'inline'
   }, {
     entry: 'node_modules/prettier/parser-postcss.js',
     dest: 'prettierBundle/prettier.js',
     format: 'iife',
+    moduleName: 'prettier',
     sourceMap: 'inline'
   }
 ]
