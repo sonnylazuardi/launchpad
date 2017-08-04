@@ -6,7 +6,7 @@ npm
   .install(['CompuIves/custom-prettier-codesandbox'], {
     // cwd to seperate directory should be working but it isn't???
     cwd: './node_modules',
-    save: true,
+    save: false,
   })
   .then(function() {
     console.log('Success!!');
@@ -56,7 +56,9 @@ npm
             });
           });
       });
+  })/*.then(function() {
+    npm.uninstall(['prettier'], {
+      cwd: './node_modules',
+    });
   })
-  .catch(function() {
-    console.log('unable to install package');
-  });
+  */
