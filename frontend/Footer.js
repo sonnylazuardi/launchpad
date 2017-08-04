@@ -1,6 +1,8 @@
 /* @flow */
 
-import { prettier } from 'prettier';
+//import { prettier } from 'prettier';
+import * as prettier from '../prettierBundle/prettier';
+//import * as prettier from '../node_modules/prettier/bin/prettier'
 import React from 'react';
 import extendLogo from '../static/auth0-extend-logo.svg';
 import './Footer.less';

@@ -16,8 +16,10 @@ npm
       })
       .then(function(bundle) {
         bundle.write({
-          format: 'iife',
           dest: 'prettierBundle/prettier.js',
+          format: 'iife',
+          sourceMap: 'inline'
+
         });
       })
       .then(function() {
@@ -27,8 +29,9 @@ npm
           })
           .then(function(bundle) {
             bundle.write({
-              format: 'iife',
               dest: 'prettierBundle/prettier.js',
+              format: 'iife',
+              sourceMap: 'inline'
             });
           });
       })
@@ -39,8 +42,9 @@ npm
           })
           .then(function(bundle) {
             bundle.write({
-              format: 'iife',
               dest: 'prettierBundle/prettier.js',
+              format: 'iife',
+              sourceMap: 'inline'
             });
           });
       })
@@ -51,8 +55,9 @@ npm
           })
           .then(function(bundle) {
             bundle.write({
-              format: 'iife',
               dest: 'prettierBundle/prettier.js',
+              format: 'iife',
+              sourceMap: 'inline'
             });
           });
       });
