@@ -13,6 +13,7 @@ function renderFooter({ isDraft, isDeployed, canSeeLogs, url, error }) {
       onLogOpen={() => {}}
       onLogClose={() => {}}
       onModalOpen={() => {}}
+      handleFooterPrettify={() => {}}
     />
   );
 }
