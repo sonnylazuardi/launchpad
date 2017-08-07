@@ -10,7 +10,7 @@ import PadContainer from './PadContainer';
 import ListContainer from './ListContainer';
 
 const networkInterface = createNetworkInterface({
-  uri: process.env.REACT_APP_LAUNCHPAD_API_URL,
+  uri: (process.env.REACT_APP_LAUNCHPAD_API_URL: any),
 });
 
 networkInterface.use([
