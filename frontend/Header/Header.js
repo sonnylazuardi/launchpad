@@ -106,7 +106,9 @@ export default class Header extends Component {
           <HeaderLogo />
 
           <div className="Management-Buttons">
-            <HeaderButton Link to="/new">New</HeaderButton>
+            <HeaderButton Link to="/new">
+              New
+            </HeaderButton>
             {this.renderDeployButton()}
             {this.renderDownloadButton()}
             {this.renderForkButton()}

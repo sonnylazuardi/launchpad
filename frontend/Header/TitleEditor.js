@@ -74,11 +74,10 @@ export default class TitleEditor extends React.Component {
 
   render() {
     if (this.props.canEdit) {
-      console.log('in this.props.canEdit');
       return (
         <div className="Title-Editor">
           <Helmet>
-          <meta name="helmet:title" content="Test"/>
+            <meta name="helmet:title" content={this.props.title} />
           </Helmet>
           <div
             className="edit-title-button"

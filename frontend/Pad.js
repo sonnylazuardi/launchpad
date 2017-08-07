@@ -23,9 +23,9 @@ type PadProps = {|
     description?: string,
     defaultQuery?: string,
   }) => any,
-  updateMetaTags: ({
-    title?: string
-  })
+  updateMetaTags: {
+    title?: string,
+  },
 |};
 
 export default class Pad extends Component {

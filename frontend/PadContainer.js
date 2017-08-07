@@ -72,11 +72,11 @@ type PadContainerProps = {|
       defaultQuery?: string,
     },
   }) => Promise<ApolloMutationResult<'pad', PadType>>,
-  updateMetaTags: ({
+  updateMetaTags: {
     variables: {
-      title: String
-    }
-  })
+      title: String,
+    },
+  },
 |};
 
 class PadContainer extends Component {
@@ -315,13 +315,12 @@ class PadContainer extends Component {
     }
   };
 
-
   handleUpdateMetadata = async (input: {
     title?: string,
     description?: string,
     defaultQuery?: string,
   }) => {
-    console.log('in handleUpdateMetaData', input)
+    console.log('in handleUpdateMetaData', input);
     if (!this.state.isDeploying) {
       this.setState({
         isDeploying: true,
