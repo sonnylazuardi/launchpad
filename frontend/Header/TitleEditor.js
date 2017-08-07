@@ -1,6 +1,7 @@
 /* @flow */
 
 import React from 'react';
+import Helmet from 'react-helmet';
 
 import './TitleEditor.less';
 
@@ -73,8 +74,12 @@ export default class TitleEditor extends React.Component {
 
   render() {
     if (this.props.canEdit) {
+      console.log('in this.props.canEdit');
       return (
         <div className="Title-Editor">
+          <Helmet>
+          <meta name="helmet:title" content="Test"/>
+          </Helmet>
           <div
             className="edit-title-button"
             aria-label="Edit Title and Description"

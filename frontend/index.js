@@ -14,16 +14,6 @@ import {
   createNetworkInterface,
 } from 'react-apollo';
 
-// probably don't need this here, can just do it in PadContainer
-const updateMetaTags = function(newTitle) {
-  return (
-    <Helmet>
-      <meta charSet="utf-8" />
-        <title> {newTitle} </title>
-    </Helmet>
-  )
-}
-
 const networkInterface = createNetworkInterface({
   uri: process.env.REACT_APP_LAUNCHPAD_API_URL,
 });
@@ -64,14 +54,14 @@ render(
           exact
           path="/new"
           render={() => {
-            return <PadContainer id={null} updateMetaTags={updateMetaTags}/>;
+            return <PadContainer id={null} />;
           }}
         />
         <Route
           exact
           path="/:id"
           render={id => {
-            return <PadContainer id={id.match.params.id} updateMetaTags={updateMetaTags}/>;
+            return <PadContainer id={id.match.params.id} />;
           }}
         />
       </Switch>
