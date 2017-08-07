@@ -1,5 +1,7 @@
 # Launchpad
 
+test
+
 Launchpad is an in-browser GraphQL server playground. You can write a GraphQL
 schema example in JavaScript, and instantly create a serverless,
 publicly-accessible GraphQL endpoint. We call these code snippets that live on
