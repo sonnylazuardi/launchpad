@@ -20,6 +20,8 @@ type FooterProps = {|
 |};
 
 export default class Footer extends React.Component {
+  props: FooterProps;
+
   handleToggleLog = () => {
     if (this.props.isLogOpen) {
       this.props.onLogClose();
