@@ -332,6 +332,7 @@ exports[`render normally 1`] = `
   <Footer
     canSeeLogs={true}
     error={null}
+    handleFooterPrettify={[Function]}
     isDeployed={undefined}
     isDraft={undefined}
     isLogOpen={false}

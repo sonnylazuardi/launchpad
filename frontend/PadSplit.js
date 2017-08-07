@@ -20,7 +20,7 @@ import SplitPane from 'react-split-pane';
 type PadSplitProps = {|
   pad: Pad,
   user: ?User,
-  currentCode: string,
+  currentCode: any,
   currentContext: Array<Context>,
   isDeploying: boolean,
   error: ?string,
