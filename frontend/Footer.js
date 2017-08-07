@@ -1,6 +1,6 @@
 /* @flow */
 
-import { prettier } from 'custom-prettier-codesandbox'
+import { prettier } from 'custom-prettier-codesandbox';
 import React from 'react';
 import extendLogo from '../static/auth0-extend-logo.svg';
 import './Footer.less';

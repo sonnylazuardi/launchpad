@@ -1,7 +1,7 @@
 /* @flow */
 
 import React, { Component } from 'react';
-import prettier from 'custom-prettier-codesandbox'
+import prettier from 'custom-prettier-codesandbox';
 import type { Pad, User, Context } from './types';
 import PadStorage from './PadStorage';
 import Header from './Header/Header';
