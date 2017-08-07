@@ -1,12 +1,10 @@
 /* @flow */
 
-//import { prettier } from 'prettier';
-import * as prettier from '../prettierBundle/prettier';
-//import * as prettier from '../node_modules/prettier/bin/prettier'
+import { prettier } from 'custom-prettier-codesandbox'
 import React from 'react';
 import extendLogo from '../static/auth0-extend-logo.svg';
 import './Footer.less';
-//const prettier = require('prettier');
+console.log('prettier: ', prettier);
 
 type FooterProps = {|
   isDraft: boolean,
