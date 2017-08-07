@@ -19,10 +19,10 @@ import SplitPane from 'react-split-pane';
 type PadSplitProps = {|
   pad: Pad,
   user: ?User,
-  currentCode: string,
   currentContext: Array<Context>,
   isDeploying: boolean,
   error: ?string,
+  currentCode: any,
   onDeploy: () => any,
   onReset: () => any,
   onFork: () => any,
@@ -45,7 +45,6 @@ export default class PadSplit extends Component {
     viewing: View,
     isLogOpen: boolean,
     openModal: ?ModalType,
-    currentCode: String,
   };
 
   constructor(props: PadSplitProps) {
@@ -148,7 +147,7 @@ export default class PadSplit extends Component {
 
   handleFooterPrettify = () => {
     this.props.onCodeChange(
-      prettier.format(this.state.currentCode, { singleQuote: true }),
+      prettier.format(this.props.currentCode, { singleQuote: true }),
     );
   };
 

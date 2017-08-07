@@ -17,12 +17,10 @@ type FooterProps = {|
   onLogOpen: () => any,
   onLogClose: () => any,
   onModalOpen: (type: 'dependencies' | 'secrets') => any,
-  handleFooterPrettify: () => any,
+  handleFooterPrettify: ?() => any,
 |};
 
 export default class Footer extends React.Component {
-  props: FooterProps;
-
   handleToggleLog = () => {
     if (this.props.isLogOpen) {
       this.props.onLogClose();
