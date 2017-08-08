@@ -41,7 +41,7 @@
     "node-fetch": "^1.7.1",
     "prismjs": "^1.6.0",
     "react": "^15.4.2",
-    "react-apollo": "^1.0.0",
+    "react-apollo": "^1.4.11",
     "react-codemirror": "^0.3.0",
     "react-dom": "^15.4.2",
     "react-modal": "^1.7.7",
