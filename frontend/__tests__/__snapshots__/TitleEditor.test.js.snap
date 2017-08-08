@@ -10,6 +10,33 @@ exports[`interaction 1`] = `
   <div
     className="Title-Editor"
   >
+    <HelmetWrapper
+      encodeSpecialCharacters={true}
+    >
+      <SideEffect(NullComponent)
+        encodeSpecialCharacters={true}
+        meta={
+          Array [
+            Object {
+              "content": "test",
+              "name": "helmet:title",
+            },
+          ]
+        }
+      >
+        <NullComponent
+          encodeSpecialCharacters={true}
+          meta={
+            Array [
+              Object {
+                "content": "test",
+                "name": "helmet:title",
+              },
+            ]
+          }
+        />
+      </SideEffect(NullComponent)>
+    </HelmetWrapper>
     <div
       aria-label="Edit Title and Description"
       className="edit-title-button"
@@ -41,6 +68,33 @@ exports[`interaction 2`] = `
   <div
     className="Title-Editor"
   >
+    <HelmetWrapper
+      encodeSpecialCharacters={true}
+    >
+      <SideEffect(NullComponent)
+        encodeSpecialCharacters={true}
+        meta={
+          Array [
+            Object {
+              "content": "test",
+              "name": "helmet:title",
+            },
+          ]
+        }
+      >
+        <NullComponent
+          encodeSpecialCharacters={true}
+          meta={
+            Array [
+              Object {
+                "content": "test",
+                "name": "helmet:title",
+              },
+            ]
+          }
+        />
+      </SideEffect(NullComponent)>
+    </HelmetWrapper>
     <div
       aria-label="Edit Title and Description"
       className="edit-title-button"
@@ -72,6 +126,33 @@ exports[`interaction 3`] = `
   <div
     className="Title-Editor"
   >
+    <HelmetWrapper
+      encodeSpecialCharacters={true}
+    >
+      <SideEffect(NullComponent)
+        encodeSpecialCharacters={true}
+        meta={
+          Array [
+            Object {
+              "content": "test",
+              "name": "helmet:title",
+            },
+          ]
+        }
+      >
+        <NullComponent
+          encodeSpecialCharacters={true}
+          meta={
+            Array [
+              Object {
+                "content": "test",
+                "name": "helmet:title",
+              },
+            ]
+          }
+        />
+      </SideEffect(NullComponent)>
+    </HelmetWrapper>
     <div
       aria-label="Edit Title and Description"
       className="edit-title-button"

@@ -12,7 +12,8 @@ exports[`render others 1`] = `
       className="Management-Buttons"
     >
       <HeaderButton
-        onClick={[Function]}
+        Link={true}
+        to="/new"
       >
         New
       </HeaderButton>
@@ -78,7 +79,8 @@ exports[`renders anon existing 1`] = `
       className="Management-Buttons"
     >
       <HeaderButton
-        onClick={[Function]}
+        Link={true}
+        to="/new"
       >
         New
       </HeaderButton>
@@ -138,7 +140,8 @@ exports[`renders anon new 1`] = `
       className="Management-Buttons"
     >
       <HeaderButton
-        onClick={[Function]}
+        Link={true}
+        to="/new"
       >
         New
       </HeaderButton>
@@ -198,7 +201,8 @@ exports[`renders deploying 1`] = `
       className="Management-Buttons"
     >
       <HeaderButton
-        onClick={[Function]}
+        Link={true}
+        to="/new"
       >
         New
       </HeaderButton>
@@ -264,7 +268,8 @@ exports[`renders draft 1`] = `
       className="Management-Buttons"
     >
       <HeaderButton
-        onClick={[Function]}
+        Link={true}
+        to="/new"
       >
         New
       </HeaderButton>
@@ -330,7 +335,8 @@ exports[`renders own 1`] = `
       className="Management-Buttons"
     >
       <HeaderButton
-        onClick={[Function]}
+        Link={true}
+        to="/new"
       >
         New
       </HeaderButton>
@@ -396,7 +402,8 @@ exports[`renders undeployed 1`] = `
       className="Management-Buttons"
     >
       <HeaderButton
-        onClick={[Function]}
+        Link={true}
+        to="/new"
       >
         New
       </HeaderButton>
