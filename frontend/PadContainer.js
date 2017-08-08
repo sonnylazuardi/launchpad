@@ -19,6 +19,7 @@ import { LoadingSpinner } from './LoadingSpinner';
 
 type PadContainerProps = {|
   id: string,
+  history?: any,
   client: any,
   padData: ApolloData<'pad', PadType>,
   meData: ApolloData<'me', UserType>,
@@ -195,6 +196,19 @@ class PadContainer extends Component {
   }
 
   afterDeploy(target, result) {
+    if (
+      result &&
+      target === 'deploy' &&
+      document.location.pathname === '/new'
+    ) {
+      if (this.props.history) {
+        this.props.history.push(`/${result.data.pad.id}`, [
+          {},
+          'Apollo Launchpad',
+        ]);
+      }
+    }
+
     if (this.state.nextDeploy) {
       const nextDeploy = this.state.nextDeploy;
       this.setState(
