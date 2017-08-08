@@ -409,7 +409,6 @@ class PadContainer extends Component {
           onLogin={this.handleLogin}
           onLogout={this.handleLogout}
           onUpdateMetadata={this.handleUpdateMetadata}
-          updateMetaTags={this.props.updateMetaTags}
         />
       );
     }
