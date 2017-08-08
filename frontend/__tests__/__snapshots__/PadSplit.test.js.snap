@@ -88,7 +88,7 @@ exports[`render normally 1`] = `
               "requiresPrefix": Object {},
             },
             "_requiresPrefix": Object {},
-            "_userAgent": "Node.js (darwin; U; rv:v8.2.1) AppleWebKit/537.36 (KHTML, like Gecko)",
+            "_userAgent": "Node.js (linux; U; rv:v8.2.1) AppleWebKit/537.36 (KHTML, like Gecko)",
             "prefixedKeyframes": "keyframes",
           }
         }
