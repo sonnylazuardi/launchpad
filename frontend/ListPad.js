@@ -1,6 +1,7 @@
 /* @flow */
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import type { Pad } from './types';
 import { getPrismHighlighter } from './services/CodeService';
 import './ListPad.less';
@@ -61,7 +62,8 @@ export default class ListPad extends Component {
     const padUser = pad.user || {};
     return (
       <div className="ListPad">
-        <a className="ListPad-Link" href={`/${this.props.pad.id}`}>
+        <Link className="ListPad-Link" to={`${this.props.pad.id}`}>
+          Pads you created
           <div className="ListPad-Header">
             <div className="ListPad-HeaderUsername">
               {padUser.githubUsername || 'Unknown'}
@@ -71,7 +73,7 @@ export default class ListPad extends Component {
             </div>
           </div>
           {this.renderCode()}
-        </a>
+        </Link>
       </div>
     );
   }
