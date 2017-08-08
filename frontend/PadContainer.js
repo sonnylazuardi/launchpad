@@ -73,11 +73,6 @@ type PadContainerProps = {|
       defaultQuery?: string,
     },
   }) => Promise<ApolloMutationResult<'pad', PadType>>,
-  updateMetaTags: {
-    variables: {
-      title: String,
-    },
-  },
 |};
 
 class PadContainer extends Component {

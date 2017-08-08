@@ -1,10 +1,6 @@
 /* @flow */
 
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet';
-=======
->>>>>>> dd487f07a467109297945c1c73b621eb7bba8e9e
 import { render } from 'react-dom';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import './index.less';
@@ -18,11 +14,7 @@ import {
 } from 'react-apollo';
 
 const networkInterface = createNetworkInterface({
-<<<<<<< HEAD
-  uri: (process.env.REACT_APP_LAUNCHPAD_API_URL: any),
-=======
   uri: process.env.REACT_APP_LAUNCHPAD_API_URL,
->>>>>>> dd487f07a467109297945c1c73b621eb7bba8e9e
 });
 
 networkInterface.use([
@@ -46,10 +38,6 @@ const apolloClient = new ApolloClient({
 
 render(
   <ApolloProvider client={apolloClient}>
-<<<<<<< HEAD
-    {/*<meta title={updateMetaTags} />*/}
-=======
->>>>>>> dd487f07a467109297945c1c73b621eb7bba8e9e
     <BrowserRouter>
       <Switch>
         <Route exact path="/list" component={ListContainer} />
@@ -63,25 +51,15 @@ render(
         <Route
           exact
           path="/new"
-<<<<<<< HEAD
-          render={() => {
-            return <PadContainer id={null} />;
-=======
           render={({ match, history }) => {
             return <PadContainer id={null} history={history} />;
->>>>>>> dd487f07a467109297945c1c73b621eb7bba8e9e
           }}
         />
         <Route
           exact
           path="/:id"
-<<<<<<< HEAD
-          render={id => {
-            return <PadContainer id={id.match.params.id} />;
-=======
           render={({ match, history }) => {
             return <PadContainer id={match.params.id} history={history} />;
->>>>>>> dd487f07a467109297945c1c73b621eb7bba8e9e
           }}
         />
       </Switch>

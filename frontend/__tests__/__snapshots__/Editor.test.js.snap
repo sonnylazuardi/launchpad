@@ -61,6 +61,37 @@ export function context(headers, secrets) {
   <div
     className="Editor"
   >
+    <HelmetWrapper
+      encodeSpecialCharacters={true}
+    >
+      <SideEffect(NullComponent)
+        encodeSpecialCharacters={true}
+        meta={
+          Array [
+            Object {
+              "content": "// Welcome to Launchpad!
+          // Log in to edit and save pads, run queries in GraphiQL on the right.
+          // Click \\"Download\\" above to get a zip with a standalo",
+              "name": "helmet:code-description",
+            },
+          ]
+        }
+      >
+        <NullComponent
+          encodeSpecialCharacters={true}
+          meta={
+            Array [
+              Object {
+                "content": "// Welcome to Launchpad!
+            // Log in to edit and save pads, run queries in GraphiQL on the right.
+            // Click \\"Download\\" above to get a zip with a standalo",
+                "name": "helmet:code-description",
+              },
+            ]
+          }
+        />
+      </SideEffect(NullComponent)>
+    </HelmetWrapper>
     <CodeMirror
       onChange={[Function]}
       options={
