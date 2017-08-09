@@ -1,6 +1,7 @@
 /* @flow */
 
 import React from 'react';
+import Helmet from 'react-helmet';
 
 import './TitleEditor.less';
 
@@ -75,6 +76,20 @@ export default class TitleEditor extends React.Component {
     if (this.props.canEdit) {
       return (
         <div className="Title-Editor">
+          <Helmet>
+            <meta
+              name="twitter:title"
+              content={
+                this.state.title == '' ? 'Untitled Pad' : this.state.title
+              }
+            />
+            <meta
+              property="og:title"
+              content={
+                this.state.title == '' ? 'Untitled Pad' : this.state.title
+              }
+            />
+          </Helmet>
           <div
             className="edit-title-button"
             aria-label="Edit Title and Description"
