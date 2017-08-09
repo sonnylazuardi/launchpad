@@ -74,29 +74,23 @@ export default class TitleEditor extends React.Component {
 
   render() {
     if (this.props.canEdit) {
-      console.log(this.props);
-      if (this.props.title == null) {
-        console.log('no title');
-      } else {
-        console.log('title');
-      }
       return (
         <div className="Title-Editor">
           <Helmet>
             <meta
               name="twitter:title"
               content={
-                this.props.title == null || this.props.title == ''
+                this.state.title == null || this.state.title == ''
                   ? 'Untitled Pad'
-                  : this.props.title
+                  : this.state.title
               }
             />
             <meta
               property="og:title"
               content={
-                this.props.title == null || this.props.title == ''
+                this.state.title == null || this.state.title == ''
                   ? 'Untitled Pad'
-                  : this.props.title
+                  : this.state.title
               }
             />
           </Helmet>
