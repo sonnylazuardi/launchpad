@@ -79,6 +79,7 @@ export default class TitleEditor extends React.Component {
           <Helmet>
             <meta
               name="twitter:title"
+              property="twitter:title"
               content={
                 this.state.title == null || this.state.title == ''
                   ? 'Untitled Pad'
