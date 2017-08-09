@@ -41,12 +41,6 @@ export default class Editor extends Component {
   render() {
     return (
       <div className="Editor" title={this.renderTitle()}>
-        <Helmet>
-          <meta
-            name="helmet:code-description"
-            content={this.props.code.slice(0, 150)}
-          />
-        </Helmet>
         <ReactCodeMirror
           ref={el => (this.codemirror = el)}
           value={this.props.code}
