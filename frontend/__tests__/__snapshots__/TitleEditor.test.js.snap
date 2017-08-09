@@ -84,11 +84,11 @@ exports[`interaction 2`] = `
         meta={
           Array [
             Object {
-              "content": "test",
+              "content": "New test",
               "name": "twitter:title",
             },
             Object {
-              "content": "test",
+              "content": "New test",
               "property": "og:title",
             },
           ]
@@ -99,11 +99,11 @@ exports[`interaction 2`] = `
           meta={
             Array [
               Object {
-                "content": "test",
+                "content": "New test",
                 "name": "twitter:title",
               },
               Object {
-                "content": "test",
+                "content": "New test",
                 "property": "og:title",
               },
             ]
@@ -150,11 +150,11 @@ exports[`interaction 3`] = `
         meta={
           Array [
             Object {
-              "content": "test",
+              "content": "New test 2",
               "name": "twitter:title",
             },
             Object {
-              "content": "test",
+              "content": "New test 2",
               "property": "og:title",
             },
           ]
@@ -165,11 +165,11 @@ exports[`interaction 3`] = `
           meta={
             Array [
               Object {
-                "content": "test",
+                "content": "New test 2",
                 "name": "twitter:title",
               },
               Object {
-                "content": "test",
+                "content": "New test 2",
                 "property": "og:title",
               },
             ]
