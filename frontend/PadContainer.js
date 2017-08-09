@@ -329,7 +329,6 @@ class PadContainer extends Component {
     description?: string,
     defaultQuery?: string,
   }) => {
-    console.log('in handleUpdateMetaData', input);
     if (!this.state.isDeploying) {
       this.setState({
         isDeploying: true,
