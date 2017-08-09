@@ -71,7 +71,7 @@ exports[`render normally 1`] = `
               "browserVersion": NaN,
               "cssPrefix": "-webkit-",
               "jsPrefix": "Webkit",
-              "linus": true,
+              "linux": true,
               "name": "Safari",
               "osVersion": NaN,
               "safari": true,
