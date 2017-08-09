@@ -2,7 +2,6 @@
 
 import { debounce } from 'lodash';
 import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
 import type { Pad as PadType, User, Context, DeployPayload } from './types';
 import { getCodeCompiler } from './services/CodeService';
 import PadSplit from './PadSplit';

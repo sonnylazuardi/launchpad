@@ -1,7 +1,6 @@
 /* @flow */
 
 import React, { Component } from 'react';
-import Helmet from 'react-helmet';
 import ReactCodeMirror from 'react-codemirror';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/solarized.css';
