@@ -36,6 +36,9 @@ const apolloClient = new ApolloClient({
   networkInterface,
 });
 
+window.requestIdleCallback = function(cb) {
+  cb();
+}
 render(
   <ApolloProvider client={apolloClient}>
     <BrowserRouter>
