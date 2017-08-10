@@ -76,7 +76,7 @@ export default class TitleEditor extends React.Component {
     if (this.props.canEdit) {
       return (
         <div className="Title-Editor">
-          {/* <Helmet>
+          <Helmet>
             <meta
               name="twitter:title"
               content={
@@ -89,7 +89,7 @@ export default class TitleEditor extends React.Component {
                 this.state.title == '' ? 'Untitled Pad' : this.state.title
               }
             />
-          </Helmet> */}
+          </Helmet>
           <div
             className="edit-title-button"
             aria-label="Edit Title and Description"
