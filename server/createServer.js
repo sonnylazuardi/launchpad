@@ -57,5 +57,9 @@ export default function createServer(options: Options) {
     }),
   );
 
+  app.use(require('prerender-node').set(
+    'prerenderServiceUrl', 'http://localhost:1337/')
+  .set('prerenderToken', '1TmRKJYqrTDH0cnQqmHU'));
+
   return app;
 }
