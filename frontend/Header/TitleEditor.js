@@ -72,11 +72,24 @@ export default class TitleEditor extends React.Component {
     }
   }
 
+  componentDidMount() {
+    let meta = document.createElement("meta")
+    meta.setAttribute("name", "twitter:title")
+    if (this.state.title == null || this.state.title == '') {
+      meta.setAttribute("child", "Untitled Pad")
+    }
+    else {
+      meta.setAttribute("child", this.state.title)
+    }
+    document.head.appendChild(meta)
+  }
+
   render() {
     if (this.props.canEdit) {
       return (
         <div className="Title-Editor">
-          <Helmet>
+          
+          {/* <Helmet>
             <meta
               name="twitter:title"
               content={
@@ -89,7 +102,7 @@ export default class TitleEditor extends React.Component {
                 this.state.title == '' ? 'Untitled Pad' : this.state.title
               }
             />
-          </Helmet>
+          </Helmet> */}
           <div
             className="edit-title-button"
             aria-label="Edit Title and Description"
